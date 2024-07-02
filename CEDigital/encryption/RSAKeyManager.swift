@@ -64,7 +64,7 @@ class RSAKeyManager {
     public func getMyPublicKeyString(pemEncoded: String) -> PublicKey? {
         do {
             return try PublicKey(pemEncoded: pemEncoded)
-        } catch let _ {
+        } catch _ {
             //Log Error
             return nil
         }

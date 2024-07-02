@@ -13,10 +13,7 @@ end
 
 target 'CEDigital' do
   
-  pod 'Alamofire'
   pod 'FirebaseFirestoreSwift'
-  pod 'ReachabilitySwift'
-  pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Crashlytics'

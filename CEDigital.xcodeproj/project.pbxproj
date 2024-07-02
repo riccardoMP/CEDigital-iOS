@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449DFBC95928A35564961013 /* Pods_CEDigital.framework */; };
+		B85FCF392C349A8E0019CDA9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF382C349A8E0019CDA9 /* Alamofire */; };
+		B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3B2C349D290019CDA9 /* Reachability */; };
+		B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */; };
+		B85FCF422C349F8B0019CDA9 /* UIDeviceComplete in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF412C349F8B0019CDA9 /* UIDeviceComplete */; };
 		C709258A2732DDD800387093 /* PopUpResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70925892732DDD800387093 /* PopUpResponseProtocol.swift */; };
 		C70DC3882914594D00980DD7 /* EnrollResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DC3872914594D00980DD7 /* EnrollResponse.swift */; };
 		C722407C2502E2D100AC0A8E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722407B2502E2D100AC0A8E /* Environment.swift */; };
@@ -373,6 +377,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */,
+				B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */,
+				B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */,
+				B85FCF392C349A8E0019CDA9 /* Alamofire in Frameworks */,
+				B85FCF422C349F8B0019CDA9 /* UIDeviceComplete in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,6 +1091,12 @@
 			dependencies = (
 			);
 			name = CEDigital;
+			packageProductDependencies = (
+				B85FCF382C349A8E0019CDA9 /* Alamofire */,
+				B85FCF3B2C349D290019CDA9 /* Reachability */,
+				B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */,
+				B85FCF412C349F8B0019CDA9 /* UIDeviceComplete */,
+			);
 			productName = CEDigital;
 			productReference = C7EA33DE24E05C41002EE73D /* CEDigital.app */;
 			productType = "com.apple.product-type.application";
@@ -1113,6 +1127,12 @@
 				es,
 			);
 			mainGroup = C7EA33D524E05C41002EE73D;
+			packageReferences = (
+				B85FCF372C349A8E0019CDA9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B85FCF3A2C349D290019CDA9 /* XCRemoteSwiftPackageReference "Reachability" */,
+				B85FCF3D2C349E370019CDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				B85FCF402C349F8B0019CDA9 /* XCRemoteSwiftPackageReference "UIDeviceComplete" */,
+			);
 			productRefGroup = C7EA33DF24E05C41002EE73D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1691,6 +1711,64 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B85FCF372C349A8E0019CDA9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		B85FCF3A2C349D290019CDA9 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B85FCF3D2C349E370019CDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		B85FCF402C349F8B0019CDA9 /* XCRemoteSwiftPackageReference "UIDeviceComplete" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Nirma/UIDeviceComplete";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B85FCF382C349A8E0019CDA9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF372C349A8E0019CDA9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B85FCF3B2C349D290019CDA9 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF3A2C349D290019CDA9 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF3D2C349E370019CDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		B85FCF412C349F8B0019CDA9 /* UIDeviceComplete */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF402C349F8B0019CDA9 /* XCRemoteSwiftPackageReference "UIDeviceComplete" */;
+			productName = UIDeviceComplete;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7EA33D624E05C41002EE73D /* Project object */;
 }

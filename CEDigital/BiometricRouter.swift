@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-
+import Foundation
 
 enum BiometricRouter: URLRequestConvertible {
     

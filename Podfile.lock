@@ -947,7 +947,6 @@ PODS:
     - abseil/xcprivacy
   - abseil/xcprivacy (1.20240116.2)
   - ActiveLabel (1.1.0)
-  - Alamofire (5.9.1)
   - BoringSSL-GRPC (0.0.32):
     - BoringSSL-GRPC/Implementation (= 0.0.32)
     - BoringSSL-GRPC/Interface (= 0.0.32)
@@ -1171,7 +1170,6 @@ PODS:
     - gRPC-Core/Privacy (= 1.62.5)
   - gRPC-Core/Interface (1.62.5)
   - gRPC-Core/Privacy (1.62.5)
-  - IQKeyboardManagerSwift (6.5.16)
   - leveldb-library (1.22.5)
   - lottie-ios (4.4.1)
   - MaterialComponents/AnimationTiming (116.0.1)
@@ -1255,31 +1253,26 @@ PODS:
   - PromisesObjC (2.4.0)
   - PromisesSwift (2.4.0):
     - PromisesObjC (= 2.4.0)
-  - ReachabilitySwift (5.2.3)
   - SwiftyRSA (1.7.0):
     - SwiftyRSA/ObjC (= 1.7.0)
   - SwiftyRSA/ObjC (1.7.0)
 
 DEPENDENCIES:
   - ActiveLabel
-  - Alamofire
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crashlytics
   - Firebase/Firestore
   - FirebaseFirestoreSwift
-  - IQKeyboardManagerSwift
   - lottie-ios
   - "MaterialComponents/TextControls+FilledTextFields (~> 116.0.1)"
   - "MaterialComponents/TextControls+FilledTextFieldsTheming (~> 116.0.1)"
-  - ReachabilitySwift
   - SwiftyRSA
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - abseil
     - ActiveLabel
-    - Alamofire
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -1300,7 +1293,6 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
-    - IQKeyboardManagerSwift
     - leveldb-library
     - lottie-ios
     - MaterialComponents
@@ -1309,13 +1301,11 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - PromisesSwift
-    - ReachabilitySwift
     - SwiftyRSA
 
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
-  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   BoringSSL-GRPC: 1e2348957acdbcad360b80a264a90799984b2ba6
   Firebase: 49e62242b3ae422a002ab647a7e62a332a8c3ec1
   FirebaseAnalytics: 1e06fe7d246af7230b08d1d9cdca54a4624dd461
@@ -1336,7 +1326,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   "gRPC-C++": e725ef63c4475d7cdb7e2cf16eb0fde84bd9ee51
   gRPC-Core: eee4be35df218649fe66d721a05a7f27a28f069b
-  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   leveldb-library: e8eadf9008a61f9e1dde3978c086d2b6d9b9dc28
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
   MaterialComponents: a8759fa4dd253b6026648730ec0252c428dee589
@@ -1345,9 +1334,8 @@ SPEC CHECKSUMS:
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
-  ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
 
-PODFILE CHECKSUM: e54db3af3d07dfa992535eba4e5c55aa0c60ecf2
+PODFILE CHECKSUM: 2bdf8d407883c5ff8318b44ebdd6dcd438e550ab
 
 COCOAPODS: 1.13.0

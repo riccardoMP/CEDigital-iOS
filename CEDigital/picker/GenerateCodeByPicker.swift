@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UIDeviceComplete
 
 class GenerateCodeByPicker: NSObject {
     
@@ -54,26 +54,19 @@ class GenerateCodeByPicker: NSObject {
         actionSheet.addAction(UIAlertAction(title: "general_cancel".localized, style: .cancel, handler: nil))
         
         
-        //if iPhone
-        if UIDevice.isPhone  {
+        let deviceFamily = UIDevice.current.dc.deviceFamily
+        
+        switch deviceFamily {
+        case .iPhone:
             currentVC.present(actionSheet, animated: true, completion: nil)
             
-        }else{
+        default:
             //In iPad Change Rect to position Popover
             actionSheet.popoverPresentationController?.sourceRect = currentVC.view.frame
             actionSheet.popoverPresentationController?.sourceView = currentVC.view
             
             currentVC.present(actionSheet, animated: true, completion: nil)
-        }
-        
-        
-        
+        }   
     }
-    
-    
-    
-    
-    
-    
 }
 

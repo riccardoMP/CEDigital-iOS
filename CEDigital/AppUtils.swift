@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MessageUI
+import UIDeviceComplete
 
 public class AppUtils{
     
@@ -176,11 +177,17 @@ public class AppUtils{
     
     static func getSizeFactor() -> CGFloat{
         
-        var sizeFactor = UIParameters.SIZE_FACTOR_NORMAL
-        if(UIDevice().type == Model.iPhone6 || UIDevice().type == Model.iPhone6S || UIDevice().type == Model.iPhone7 || UIDevice().type == Model.iPhone8){
+        var sizeFactor : CGFloat
+        let device = UIDevice().dc.deviceModel
+        
+        switch device {
+        case .iPhone6, .iPhone6S, .iPhone7, .iPhone8, .iPhoneSE2, .iPhoneSE3:
             sizeFactor = UIParameters.SIZE_FACTOR_SMALL
-        }else if(UIDevice().type == Model.iPhoneSE || UIDevice().type == Model.iPhone5 || UIDevice().type == Model.iPhone5S){
+        case .iPhoneSE, .iPhone5, .iPhone5S:
             sizeFactor = UIParameters.SIZE_FACTOR_TINY
+            
+        default:
+            sizeFactor = UIParameters.SIZE_FACTOR_NORMAL
         }
         
         return sizeFactor

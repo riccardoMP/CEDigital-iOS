@@ -39,7 +39,7 @@ class CETitleTextField: UIView, UITextFieldDelegate {
         self.contentView = view
         
         self.txtValue.delegate = self
-        self.txtValue.addDoneOnKeyboardWithTarget(self, action: #selector(doneButtonClicked))
+        self.txtValue.iq.addDone(target: self, action: #selector(doneButtonClicked))
         
     }
     

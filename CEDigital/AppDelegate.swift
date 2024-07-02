@@ -20,41 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var orientationLock = UIInterfaceOrientationMask.all
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        let navigationBarAppearace = UINavigationBar.appearance()
-        //Remove black underline from navigation
-        navigationBarAppearace.shadowImage = UIImage()
-        navigationBarAppearace.barStyle = .blackTranslucent
-        navigationBarAppearace.isTranslucent = false
-        
-        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        
-        if #available(iOS 15.0, *){
-            
-            
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor  = UIParameters.COLOR_PRIMARY
-            
-            
-            navigationBarAppearace.standardAppearance = appearance
-            navigationBarAppearace.scrollEdgeAppearance = appearance
-            
-            
-            //navigationBar.standardAppearance = appearance;
-            //navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
-            
-        }else{
-            navigationBarAppearace.barTintColor = UIParameters.COLOR_PRIMARY
-            navigationBarAppearace.tintColor = .white
-            navigationBarAppearace.isTranslucent = false
-            
-            
-            
-        }
-        
-        
+
+        setupNavigationColor()
         
         FirebaseConfiguration().setLoggerLevel(FirebaseLoggerLevel.min)
         
@@ -64,14 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             // In iOS 13 setup is done in SceneDelegate
         } else {
-            
             window = UIWindow(frame: UIScreen.main.bounds)
-            
             coordinator = AppCoordinator(window: window!)
-            
             coordinator?.start()
-            
-            
         }
         
         
@@ -95,6 +57,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
+    }
+    
+    //https://developer.apple.com/documentation/technotes/tn3106-customizing-uinavigationbar-appearance
+    func setupNavigationColor(){
+        
+        let newNavBarAppearance = customNavBarAppearance()
+        
+        let appearance = UINavigationBar.appearance()
+        //Remove black underline from navigation
+        appearance.shadowImage = UIImage()
+        appearance.barStyle = UIBarStyle.black
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        appearance.compactAppearance = newNavBarAppearance
+        if #available(iOS 15.0, *) {
+            appearance.standardAppearance = newNavBarAppearance
+            appearance.scrollEdgeAppearance = newNavBarAppearance
+    
+        }
+        
+    }
+    
+    
+    func customNavBarAppearance() -> UINavigationBarAppearance {
+        let customNavBarAppearance = UINavigationBarAppearance()
+        
+        // Apply an Accent background.
+        customNavBarAppearance.configureWithOpaqueBackground()
+        customNavBarAppearance.backgroundColor = UIParameters.COLOR_PRIMARY
+        
+        // Apply white colored normal and large titles.
+        customNavBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        customNavBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        
+        // Apply white color to all the nav bar buttons.
+        let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
+        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.lightText]
+        barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.label]
+        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.white]
+        customNavBarAppearance.buttonAppearance = barButtonItemAppearance
+        customNavBarAppearance.backButtonAppearance = barButtonItemAppearance
+        customNavBarAppearance.doneButtonAppearance = barButtonItemAppearance
+        
+        return customNavBarAppearance
     }
     
     @objc func applicationWillExpire(notification: NSNotification) {

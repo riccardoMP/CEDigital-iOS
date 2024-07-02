@@ -1,0 +1,42 @@
+{
+  "originHash" : "3da12a283ea870851048e5db66092e3cc0673d69d968e933235554087e8183e3",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "19e111f9246b3407fe0c334dc78fa890c40d8c67",
+        "version" : "7.0.3"
+      }
+    },
+    {
+      "identity" : "reachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashleymills/Reachability.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "7cbd73f46a7dfaeca079e18df7324c6de6d1834a"
+      }
+    },
+    {
+      "identity" : "uidevicecomplete",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Nirma/UIDeviceComplete",
+      "state" : {
+        "revision" : "9b440784a38a86bba227d50adfa8ca64d520aeb8",
+        "version" : "3.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
