@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleActionView" customModule="CEDigital" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Z4n-jV-ojc" id="N4Y-n3-CGj"/>
+                <outlet property="iviImage" destination="ufb-XQ-acC" id="xvx-8q-tYs"/>
+                <outlet property="lblTitle" destination="yXO-Mq-1kB" id="eBR-1V-16j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tYG-XR-Rua">
+            <rect key="frame" x="0.0" y="0.0" width="629" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4n-jV-ojc">
+                    <rect key="frame" x="0.0" y="44" width="629" height="119"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Fecha de solicitud" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-Mq-1kB">
+                            <rect key="frame" x="8" y="49.5" width="440.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-XQ-acC">
+                            <rect key="frame" x="606.5" y="47.5" width="14.5" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ufb-XQ-acC" secondAttribute="height" multiplier="0.6:1" id="627-HV-Zi1"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbb-Zx-1ft">
+                            <rect key="frame" x="0.0" y="118" width="629" height="1"/>
+                            <color key="backgroundColor" name="colorGrayPass"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="G77-g1-rf6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="yXO-Mq-1kB" firstAttribute="width" secondItem="Z4n-jV-ojc" secondAttribute="width" multiplier="0.7:1" id="1sJ-LL-Dbc"/>
+                        <constraint firstItem="Bbb-Zx-1ft" firstAttribute="width" secondItem="Z4n-jV-ojc" secondAttribute="width" id="6jE-WS-YgJ"/>
+                        <constraint firstItem="yXO-Mq-1kB" firstAttribute="centerY" secondItem="Z4n-jV-ojc" secondAttribute="centerY" id="M4q-v4-zg8"/>
+                        <constraint firstItem="Bbb-Zx-1ft" firstAttribute="centerX" secondItem="Z4n-jV-ojc" secondAttribute="centerX" id="OC3-zy-jlP"/>
+                        <constraint firstItem="ufb-XQ-acC" firstAttribute="centerY" secondItem="Z4n-jV-ojc" secondAttribute="centerY" id="Tbt-IS-VeU"/>
+                        <constraint firstItem="ufb-XQ-acC" firstAttribute="height" secondItem="Z4n-jV-ojc" secondAttribute="height" multiplier="0.2:1" id="TuF-8W-uJ0"/>
+                        <constraint firstItem="yXO-Mq-1kB" firstAttribute="leading" secondItem="Bbb-Zx-1ft" secondAttribute="leading" constant="8" id="fXu-PL-wev"/>
+                        <constraint firstAttribute="bottom" secondItem="Bbb-Zx-1ft" secondAttribute="bottom" id="sVO-Bi-7Xa"/>
+                        <constraint firstItem="ufb-XQ-acC" firstAttribute="trailing" secondItem="Bbb-Zx-1ft" secondAttribute="trailing" constant="-8" id="yed-3G-SJM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zhL-Cx-2Wc"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zhL-Cx-2Wc" firstAttribute="top" secondItem="Z4n-jV-ojc" secondAttribute="top" id="Hyd-bC-CRH"/>
+                <constraint firstItem="Z4n-jV-ojc" firstAttribute="leading" secondItem="zhL-Cx-2Wc" secondAttribute="leading" id="KPJ-oy-skS"/>
+                <constraint firstItem="Z4n-jV-ojc" firstAttribute="bottom" secondItem="zhL-Cx-2Wc" secondAttribute="bottom" id="m7C-QD-sAd"/>
+                <constraint firstItem="Z4n-jV-ojc" firstAttribute="trailing" secondItem="zhL-Cx-2Wc" secondAttribute="trailing" id="sjP-oK-bTD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="341.304347826087" y="-317.5271739130435"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_right" width="15" height="26.5"/>
+        <namedColor name="colorGrayPass">
+            <color red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

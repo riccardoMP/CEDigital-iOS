@@ -1,0 +1,23 @@
+//
+//  Development.xcconfig
+//  CEDigital
+//
+//  Created by Riccardo Mija Padilla on 9/4/20.
+//  Copyright © 2020 Riccardo Mija Padilla. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+XCC_ROOT_URL = http:/$()/172.27.230.29:8080/documentodigital/
+XCC_ENVIROMENT = Desarrollo
+
+
+
+XCC_FACE_TOKEN = H8yy+NdCdxMAYAMQa+W*Z2YuAU&!#$mY6n^C6gM?ky$_Pxt*XgGfrMy4xrKLPkL!
+XCC_VERIDIUM_CONFIG_DEVICE_KEY = dv0SWjRKkJDfCajVbsy2616NxPP32beg
+
+XCC_VERIDIUM_CONFIG_PRODUCT_KEY = appId = pe.gob.migraciones.cedigital.CEDigital,pe.gob.migraciones.cedigital$_expiryDate = 2023-01-10$_key = 0030450221008ed91e3cc980d3497671d50f54abd8e4e38ef5757cac9961b28c70678cd11e460220721b74be4946f47b983fc8d294495ebaa1d1420c87b61953e44cf73fde2b7770
+
+//We use the $_ value tu replace in swift code with a line break
+XCC_VERIDIUM_CONFIG_PUBLIC_KEY = -----BEGIN PUBLIC KEY-----$_MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArt5OScoZuxAvwiY81iHn$_2oUy/hcnrASOMRAURt5EBwr2VBE4qpEUe8xH5Et3B/b3mhSA7AUt69ltXwQWZg4G$_hU5foy7cqLfyhqq+gtG/CZCYU1RVL6NbGZzogVtKpRbKw8NlbLIaZAz/YOtCkc+e$_0IMpSsI9lyVPuIH4ekcbq4ne7OovA8VogjGQoGDhoFlNW+3wjhTB6KjD3ASafI3B$_5Dclgvs0dn/l7OlZuQFSLvSJWqNAmobhFbuq7CvzdfzqV/78h/aSLjIwwUEz6Cjz$_YG7i+DmOyCJWxuk961/sosDkhL5aOwU+3DcpjPmEUJCuGRn9Wr4wWQhv/xzhBPlt$_yQIDAQAB$_-----END PUBLIC KEY-----

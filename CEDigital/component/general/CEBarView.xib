@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="E84-I3-wBc" id="N6w-6V-7Ah"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="E84-I3-wBc">
+            <rect key="frame" x="0.0" y="0.0" width="629" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlE-X1-WUp">
+                    <rect key="frame" x="0.0" y="0.0" width="471.66666666666669" height="197"/>
+                    <color key="backgroundColor" name="colorPrimary"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="moz-Th-ZUu">
+                    <rect key="frame" x="471.66666666666669" y="0.0" width="157.33333333333331" height="197"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-xS-FDn">
+                            <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="197"/>
+                            <color key="backgroundColor" name="colorBlueToolbar"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFE-Ah-gdK">
+                            <rect key="frame" x="52.666666666666686" y="0.0" width="52.333333333333343" height="197"/>
+                            <color key="backgroundColor" name="colorGreenCorporative"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zz9-1a-cV7">
+                            <rect key="frame" x="104.99999999999993" y="0.0" width="52.333333333333329" height="197"/>
+                            <color key="backgroundColor" name="colorAccent"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="YQc-ny-SA7"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="moz-Th-ZUu" firstAttribute="width" secondItem="YQc-ny-SA7" secondAttribute="width" multiplier="0.25" id="3oq-DN-ipC"/>
+                <constraint firstItem="rlE-X1-WUp" firstAttribute="leading" secondItem="YQc-ny-SA7" secondAttribute="leading" id="Iwx-Kn-41E"/>
+                <constraint firstItem="moz-Th-ZUu" firstAttribute="height" secondItem="YQc-ny-SA7" secondAttribute="height" id="N44-QP-pMK"/>
+                <constraint firstItem="rlE-X1-WUp" firstAttribute="height" secondItem="YQc-ny-SA7" secondAttribute="height" id="Phu-Cb-KsJ"/>
+                <constraint firstItem="YQc-ny-SA7" firstAttribute="trailing" secondItem="moz-Th-ZUu" secondAttribute="trailing" id="Q7i-oy-pej"/>
+                <constraint firstItem="rlE-X1-WUp" firstAttribute="centerY" secondItem="YQc-ny-SA7" secondAttribute="centerY" id="bpA-Hb-9IS"/>
+                <constraint firstItem="moz-Th-ZUu" firstAttribute="centerY" secondItem="YQc-ny-SA7" secondAttribute="centerY" id="brF-lO-Nj4"/>
+                <constraint firstItem="moz-Th-ZUu" firstAttribute="leading" secondItem="rlE-X1-WUp" secondAttribute="trailing" id="ttw-zw-6A5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="341.304347826087" y="-317.5271739130435"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="colorAccent">
+            <color red="0.35686274509803922" green="0.53725490196078429" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorBlueToolbar">
+            <color red="0.0" green="0.63529411764705879" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorGreenCorporative">
+            <color red="0.60784313725490191" green="0.80000000000000004" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorPrimary">
+            <color red="0.0" green="0.28235294117647058" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

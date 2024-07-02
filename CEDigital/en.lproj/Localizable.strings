@@ -1,0 +1,282 @@
+/* 
+ Local.strings
+ CEDigital
+ 
+ Created by Riccardo Mija Padilla on 8/15/20.
+ Copyright © 2020 Riccardo Mija Padilla. All rights reserved.
+ */
+
+
+/* Generic Messages */
+
+"app_name"                              =  "Carné Extranjeria Digital";
+
+/*General*/
+"general_loading"                       =  "Cargando...";
+"general_please_wait"                   =  "Por favor, espere...";
+"general_oops"                          =  "Mensaje";
+"general_update"                        =  "Actualizar";
+"general_updating"                      =  "Actualizando...";
+"general_ok"                            =  "Aceptar";
+"general_yes"                           =  "Sí";
+"general_no"                            =  "No";
+"general_start"                         =  "INICIAR";
+"general_back"                          =  "Volver";
+"general_cancel"                        =  "Cancelar";
+"general_want_continue"                 =  "¿Deseas continuar?";
+"general_login"                         =  "Iniciar Sesión";
+"general_version"                       =  "v%1$s";
+"general_ce"                            =  "CE";
+"general_ptp"                           =  "PTP";
+"general_check"                         =  "Verificar";
+"general_select"                        =  "Seleccione una opción";
+"general_message"                       =  "Mensaje";
+"general_send_again"                    =  "Volver a enviar código";
+"general_back"                          =  "Volver";
+"general_continue"                      =  "Continuar";
+"general_error_400"                     =  "Hubo un problema con el servidor. Estamos trabajando para solucionarlo.";
+"general_terms_Condition"               =  "Los presentes términos y condiciones regulan la relación entre la Superintendencia Nacional de Migraciones y los ciudadanos extranjeros, (en adelante “usuarios”). El servicio se encuentra dirigido exclusivamente a los usuarios que cuenten con Carné de Extranjería vigente, y como usuarios de la aplicación CARNÉ DIGITAL, quienes serán responsables del uso y divulgación de sus datos personales.\n\nLa aplicación denominada CARNÉ DIGITAL, es una herramienta tecnológica de la Superintendencia Nacional de Migraciones, la cual es un complemento al Carné de Extranjería o Carné de Permiso Temporal de Permanencia que fueron emitidos de manera física.\n\nCláusula Primera: Registro\n\n1.1. El acceso a esta aplicación es gratuito, salvo en lo relativo al costo de la conexión a través de la red de telecomunicaciones suministrada por el proveedor de internet contratado por el usuario, lo cual estará a su exclusivo cargo.\n\n1.2. Para el acceso a los contenidos y beneficios de la aplicación CARNÉ DIGITAL será necesario el registro del usuario. Por ello, para acceder a los contenidos y beneficios de la aplicación el usuario deberá contar con un celular Smartphone con sistema operativo Android y completar todos los datos solicitados por la aplicación.\n\nCláusula Segunda: Condiciones Generales\n\n2.1. La aplicación CARNÉ DIGITAL mostrará a los usuarios exactamente la misma información que se encuentra en el Carné de Extranjería emitido de manera física. Asimismo, la aplicación le mostrará si el Carné se encuentra vencido o próximo a vencer.\n\n2.2 En caso de que, el usuario registrado con Carné de Extranjería requiera modificar algún dato contenido en dicho Carné, deberá realizarlo antes de la emisión del CARNÉ DIGITAL a fin de que los cambios se reflejen en la aplicación de este último.\nEn ese contexto, deberá realizar el trámite de Modificación de Datos o Traslado de sellos para Residentes e Inmigrantes a través de la Agencia Digital de MIGRACIONES https://agenciavirtual.migraciones.gob.pe/agencia-virtual/identidad.\n\n2.3. Cualquier uso doloso de la aplicación CARNÉ DIGITAL, es de responsabilidad del usuario, conllevando a las sanciones que fueran pertinentes de acuerdo a la normativa correspondiente.";
+
+"general_lorem_title"                     =  "Integer aliquet";
+"general_lorem_title_short"               =  "Integer";
+"general_lorem_description"               =  "Integer aliquet tortor ac enim ornare.";
+"general_lorem_total"                     =  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus risus, condimentum congue risus vitae, gravida gravida odio. Duis mi leo, rutrum sed porta in, imperdiet eget nunc. Nam ultrices dui vel volutpat euismod. Mauris est leo, efficitur sed libero ac, egestas posuere diam. Proin volutpat leo nec elit scelerisque interdum. Curabitur fringilla facilisis est id pellentesque. Fusce varius augue eget libero condimentum, non sagittis nunc accumsan. Nunc dignissim nunc placerat leo condimentum ultricies. Etiam faucibus sapien vitae nulla pellentesque, ac tristique lacus facilisis.";
+"generic_description_no_internet"          =  "Por favor, asegúrate de estar conectado a internet y vuelve a intentarlo.";
+"general_ce_digital"                       =  "CARNÉ DE EXTRANJERÍA DIGITAL";
+"general_ptp_digital"                      =  "PERMISO TEMPORAL DE PERMANENCIA DIGITAL";
+"general_unlink_device"                    =  "Pasaremos a desvincular su dispositivo.";
+"general_logout_device"                    =  "Pasaremos a salir de la sesión.";
+"general_logout"                           =  "Salir";
+"general_phone"                            =  "Celular";
+"general_email"                            =  "Correo";
+"general_session_logout"                   =  "Hemos cerrado tu sesión por seguridad.";
+"general_session_will_expire"              =  "Por seguridad. Tu sesión esta por expirar. ¿Desea continuar?";
+"general_settings"                         =  "Configuración";
+"general_access_denied"                    =  "Acceso Denegado";
+"general_access_camera"                    =  "Parece que denegaste el acceso a la Cámara. Dirígite a Configuraciones y acepta los permisos.";
+"general_development"                      =  "Desarrollo";
+"general_mail_hint"                        =  "Correo electrónico";
+"general_phone_hint"                       =  "Ingrese su teléfono";
+
+
+/*Choose Document*/
+"cd_title"                                =  "SELECCIONAR EL TIPO DE  DOCUMENTO";
+"cd_choose"                               =  "Elegir tipo de Carné";
+"cd_ce"                                   =  "Carné de Extranjería";
+"cd_ptp"                                  =  "Permiso Temporal de Permanencia";
+
+
+/*Authentication*/
+"auth_access"                             =  "Acceso";
+"auth_title"                              =  "ACCEDER MEDIANTE CE";
+"auth_hint_document"                      =  "Ingrese el N° de Carné";
+"auth_hint_procedure"                     =  "Ingrese el N° de Trámite";
+"auth_personal_date"                      =  "Datos Personales";
+"auth_option_procedure"                   =  "Trámite";
+"auth_option_document"                    =  "Carné";
+"auth_error_document"                     =  "Ingrese un N° de Documento válido";
+"auth_error_procedure"                    =  "Ingrese un N° de trámite válido";
+"auth_access_ce"                          =  "ACCEDER MEDIANTE CARNE DE EXTRANJERÍA";
+"auth_access_ptp"                         =  "ACCEDER MEDIANTE PERMISO TEMPORAL DE PERMANENCIA";
+
+
+// MARK: - Biometric Fingerprint
+"biometric_disclaimer"                    =  "Una vez terminada la validación de sus huellas, continuará con la verificación de su rostro.";
+"biometric_title"                         =  "DATOS DEL ADMINISTRADO";
+"biometric_step"                          =  "Para iniciar con el proceso de enrolamiento, necesitamos verificar su huella digital.";
+"biometric_verify"                        =  "Click para iniciar lectura de la mano derecha";
+"biometric_hello"                         =  "Hola %@";
+"biometric_error_parser"                  =  "Hubo un problema al procesar las huellas leídas por la cámara(parse), inténtelo otra vez.";
+"biometric_success_description"           =  "Se ha verificado correctamente sus huellas, continuaremos con el proceso.";
+"biometric_validating"                    =  "Validando información...";
+
+
+// MARK: - Biometric Facial Recognition
+"facial_step"                    =  "Para continuar con el proceso de enrolamiento, necesitamos validar su rostro con nuestros datos.";
+"facial_verify"                  =  "Click para iniciar la verificación de su rostro";
+"facial_disclaimer"              =  "Una vez terminada la verificación de su rostro, continuará con el enrolamiento.";
+"facial_success_description"     =  "Se ha verificado correctamente su rostro, continuaremos con el proceso.";
+"facial_error_sdk"               =  "Hubo un problema al validar su rostro, inténtelo otra vez.";
+"facial_setup"                   =  "Configurando Validación facial...";
+"facial_error_setup"             =  "Hubo un error al configurar la Validación facial";
+"facial_validating"              =  "Validando rostro...";
+
+
+
+// MARK: - Generate Password
+"gp_title"                                =  "REGISTRO DE USUARIO";
+"gp_hint_generate"                        =  "Contraseña";
+"gp_user_data"                            =  "DATOS DE USUARIO";
+"gp_password"                             =  "INGRESAR CONTRASEÑA";
+"gp_digital_agency"                       =  "Agencia Digital";
+"gp_hint_repeat"                          =  "Confirmar Contraseña";
+"gp_generate_password"                    =  "Generar Código de Verificación";
+"gp_terms_condition"                      =  "Estoy de acuerdo con los términos y condiciones";
+"gp_terms_condition_keyword"              = "términos y condiciones";
+"gp_dialog_title"                         =  "Términos y Condiciones";
+"gp_dialog_error_terms_condition"         =  "Es necesario aceptar los términos y condiciones";
+"gp_dialog_error_password"                =  "Contraseña no coincide";
+"gp_loading"                              =  "Generando Código...";
+"gp_disclaimer_validate"                  =  "Seleccione una opción para recibir su código de verificación:";
+"gp_sms"                                  =  "Mensaje de texto";
+"gp_mail"                                 =  "Correo electrónico";
+"gp_test"                                 =  "Opción sólo para desarrollo";
+"gp_sheet_disclaimer"                     =  "Actualiza la información de tu correo/teléfono para estar en contacto contigo.";
+"gp_sheet_email_empty"                    =  "Correo no puede ser vacío";
+"gp_sheet_validate_email"                 =  "Asegúrese que tu correo esté correcto";
+"gp_sheet_phone_empty"                    =  "Celular no puede ser vacío";
+"gp_sheet_validate_phone"                 =  "Asegúrese que tu celular esté correcto";
+"gp_sheet_update_success"                 =  "Su información se actualizó correctamente";
+"gp_sheet_title"                          =  "Información a Actualizar";
+"gp_sheet_confirm"                        =  "¿Estás seguro que deseas actualizar tu información?";
+
+
+
+// MARK: - Validate Code
+"vc_title"                                =  "REGISTRO DE USUARIO";
+"vc_subtitle"                             =  "Verificar";
+"verification_digits_sms"                 =  "Ingresa el código de 6 dígitos enviado por SMS";
+"verification_digits_mail"                =  "Ingresa el código de 6 dígitos enviado a su correo";
+"vc_hint"                                 =  "Código de verificación";
+"vc_error_empty"                          =  "Código no puede ser Vacío";
+"vc_error"                                =  "Es necesario 6 carácteres";
+"vc_validate"                             =  "Verificar Código";
+"vc_send_again"                           =  "Volver a enviar";
+"vc_loading"                              =  "Validando Código...";
+"vc_loading_register"                     =  "Registrando Usuario...";
+"vc_success"                              =  "Registroso exitoso";
+
+
+/*Login*/
+"login_title"                             =  "CARNÉ DE EXTRANJERIA DIGITAL";
+"login_general"                           =  "Iniciar";
+"login_document_number"                   =  "Número de carné";
+"login_access"                            =  "Acceder";
+"login_recovery_password"                 =  "Olvidé mi contraseña";
+"login_disclaimer"                        =  "Para poder Iniciar se debe ingresar su N° de carné y contraseña de acceso.";
+"login_enroll_again"                      =  "Enrolar Nuevo Usuario";
+
+
+/*Lecture QR*/
+"qr_title"                                =  "LECTURA DE CÓDIGO QR";
+"qr_disclaimer"                           =  "Para capturar de forma correcta el código QR generado se debe enfocar el lector de modo que sea visible en los vértices.";
+
+/*Verification*/
+"verification_capture"                    =  "CAPTURAR";
+"verification_step1"                      =  "Toma la fotografía en un ambiente iluminado.";
+"verification_step2"                      =  "Evita los objetos que oculten tu rostro.";
+"verification_step3"                      =  "Enfoca tu rostro en el recuadro que muestra la aplicación.";
+"verification_title"                      =  "CAPTURA BIOMÉTRICA FACIAL";
+"login_remember"                          =  "Recordar N° de documento";
+"login_hint_user"                         =  "Ingrese el N° de documento";
+"login_hint_password"                     =  "Ingrese la contraseña de acceso";
+"login_password_error"                    =  "Primera letra en mayúscula, mínimo 8 carácteres y números";
+"verification_digits"                     =  "Ingresa el código de 6 dígitos.";
+
+
+
+/*validation message*/
+"message_dni_length"                      =  "Asegúrese que tu dni este correcto";
+"message_document_empty"                  =  "El documento no puede ser vacío";
+"message_password_empty"                  =  "Contraseña no puede ser vacío";
+"message_password_hint"                   =  "Ingrese Contraseña";
+
+
+/*BottomNavigation*/
+"bn_digital_pass"                   =  "Documento";
+"bn_general_data"                   =  "Datos Gen.";
+"bn_qr"                             =  "QR";
+"bn_see_more"                       =  "Ver más";
+
+
+/*Digital Pass*/
+
+"dp_title"                          =        "CARNÉ DE EXTRANJERIA DIGITAL";
+"dp_see_reverse"                    =        "VER REVERSO";
+"dp_see_behind"                     =        "VER ANVERSO";
+"dp_additional_information"         =        "INFORMACIÓN ADICIONAL";
+"dp_general_data"                   =        "DATOS GENERALES";
+"dp_residence_expiration"           =        "Vencimiento de Residencia";
+"dp_procedure_number"               =        "Número Trámite";
+"dp_procedure"                      =        "Trámite";
+"dp_document_status"                =        "Estatus del Carné";
+"dp_go_online_query"                =        "Verificar carné en la página web";
+
+
+"dp_ce_title"                       =        "CARNÉ DE EXTRANJERIA   N° 002838432";
+"dp_ce_title_surname"               =        "APELLIDOS / SURNAME:";
+"dp_ce_title_name"                  =        "NOMBRES / GIVEN NAMES:";
+"dp_ce_title_nationality"           =        "NACIONALIDAD / NACIONALITY:";
+"dp_ce_title_birthday"              =        "FECHA  NACIMIENTO / DATE  BIRTH:";
+"dp_ce_title_sex"                   =        "SEXO / SEX:";
+"dp_ce_title_migratory_quality"     =        "CALIDAD MIGRATORIA / MIGRATORY QUALITY:";
+"dp_ce_title_issue_date"            =        "EMISION / DATE OF ISSUE:";
+"dp_ce_title_expiry_date"           =        "CADUCIDAD / DATE  EXPIRY:";
+"dp_ce_title_marital"               =        "ESTADO CIVIL / MARITAL:";
+"dp_ce_title_travel_document"       =        "DOCUMENTO DE VIAJE:";
+"dp_ce_title_ubigeo"                =        "Departamento/Provincia/Distrito / Current Place of Residence:";
+"dp_ce_title_address"               =        "Dirección / Address:";
+"dp_ce_title_bottom_dummu"          =        "Dirección / Address:";
+"dp_ce_title_residence_expiration"  =        "Consultar Vencimiento de Residencia en:";
+
+"dp_ptp_title"                      =        "PERMISO TEMPORAL DE PERMANENCIA - PTP";
+"dp_ptp_title_surname"              =        "APELLIDOS:";
+"dp_ptp_title_name"                 =        "NOMBRES:";
+"dp_ptp_title_nationality"          =        "NACIONALIDAD:";
+"dp_ptp_title_birthday"             =        "NACIMIENTO:";
+"dp_ptp_title_civil_state"          =        "ESTADO CIVIL:";
+"dp_ptp_title_sex"                  =        "SEXO:";
+
+"dp_ptp_title_approbation_date"     =        "Fec. Aprobación:";
+"dp_ptp_title_broadcast_date"       =        "Fec. Emisión:";
+"dp_ptp_title_expiration_date"      =        "Fec. Vencimiento:";
+
+
+/*Recovery*/
+
+"recovery_title"                               =        "RECUPERAR CONTRASEÑA";
+"recovery_subtitle"                            =        "Te enviaremos un código de acceso";
+"recovery_send_email"                          =        "Enviar Correo";
+"recovery_disclaimer"                          =        "Si deseas actualizar tu correo electrónico, por favor dirigirte al sistema de Actualización de Datos";
+"recovery_tip"                                 =        "Verificar la información";
+"recovery_subtitle_2"                          =        "Ingrese el código de acceso y tu nueva contraseña";
+"recovery_updating_password"                   =        "Actualizando contraseña...";
+"recovery_success"                             =        "Su actualización de contraseña fue exitosa";
+"recovery_validate_disclaimer"                 =        "Si no ha llegado el correo electrónico con el código de acceso, presiona para reenviar.";
+
+
+
+
+/*General Data*/
+
+"gd_personal_data"                       =        "DATOS PERSONALES";
+"gd_address_information"                 =        "INFORMACIÓN DE DOMICILIO";
+"gd_document_travel"                     =        "DOCUMENTO DE VIAJE";
+"gd_last_procedure"                      =        "ÚLTIMO TRÁMITE MIGRATORIO";
+
+"gd_names"                               =        "Nombres";
+"gd_surname"                             =        "Apellidos";
+"gd_nationality"                         =        "Nacionalidad";
+"gd_carne_number"                        =        "Número de carné";
+"gd_birthday"                            =        "Fecha nacimiento";
+"gd_sex"                                 =        "Sexo";
+"gd_type_document_number"                =        "Tipo de documento";
+"gd_document_number"                     =        "Nro documento";
+"gd_address"                             =        "Dirección actual";
+"gd_workplace"                           =        "Sitio de trabajo";
+"gd_description_document"                =        "Trámite";
+"gd_male"                                =        "MASCULINO";
+"gd_female"                              =        "FEMENINO";
+"gd_department"                          =        "Departamento";
+"gd_province"                            =        "Provincia";
+"gd_district"                            =        "Distrito";
+
+
+
+/*See More*/
+"more_configuration"                     =        "MÁS OPCIONES";
+"more_setup_description"                 =        "Aquí se podrán ver las diversas configuraciones del app y sus respectivas opciones.";
+"more_unlink_account"                    =        "Desvincular cuenta";
+"more_about"                             =        "Acerca de Migraciones";
+
+

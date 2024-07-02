@@ -1,0 +1,60 @@
+/* 
+ FaceTec.strings
+ CEDigital
+ 
+ Created by Riccardo Mija Padilla on 22/10/21.
+ Copyright © 2021 Riccardo Mija Padilla. All rights reserved.
+ */
+
+
+/*Facetex*/
+"FaceTec_accessibility_cancel_button"="Cancelar";
+"FaceTec_accessibility_torch_button"="Alternar luz";
+"FaceTec_action_accept_photo"="ACEPTAR";
+"FaceTec_action_im_ready"="ESTOY LISTO";
+"FaceTec_action_ok"="OK";
+"FaceTec_action_retake_photo"="RETOMAR";
+"FaceTec_action_select_id_card"="FOTO ID";
+"FaceTec_action_select_passport"="DNI";
+"FaceTec_action_take_photo"="TOMAR FOTO";
+"FaceTec_action_confirm"="Confirmar información";
+"FaceTec_action_continue"="Continuar";
+"FaceTec_action_try_again"="Intentar nuevamente";
+"FaceTec_camera_permission_enable_camera"="HABILITAR CAMARA";
+"FaceTec_camera_permission_header"="Habilitar Camara";
+"FaceTec_camera_permission_launch_settings"="AJUSTES DE INICIO";
+"FaceTec_camera_permission_message_auth"="Los permisos de su cámara están desactivados";
+"FaceTec_camera_permission_message_enroll"="Habilite su\ncámara selfie";
+"FaceTec_feedback_center_face"="Centre su rostro";
+"FaceTec_feedback_face_not_found"="Enmarca tu rostro";
+"FaceTec_feedback_face_not_looking_straight_ahead"="Mira hacia adelante";
+"FaceTec_feedback_face_not_upright"="Mantenga su cabeza recta";
+"Facetec_feedback_hold_steady"="Manténgase estable";
+"FaceTec_feedback_move_phone_away"="Aléjese";
+"FaceTec_feedback_move_phone_closer"="Acérquese";
+"FaceTec_feedback_move_phone_even_closer"="Mas cerca";
+"FaceTec_feedback_move_phone_to_eye_level"="Levante la camara al nivel de los ojos";
+"FaceTec_feedback_use_even_lighting"="Rostro más claro de manera más uniforme";
+"FaceTec_instructions_header_ready"="¿Estás listo para empezar?";
+"FaceTec_instructions_header_ready_1"="¿Estás listo para";
+"FaceTec_instructions_header_ready_2"="tu selfie video?";
+"FaceTec_instructions_message_ready"="Por favor enmarca tu rostro en\nel óvalo pequeño, luego en el ovalo grande";
+"FaceTec_instructions_message_ready_1"="Enmarque su rostro en el óvalo,";
+"FaceTec_instructions_message_ready_2"="presione Estoy Listo & Acérquese lentamente";
+"FaceTec_result_facescan_upload_message"="Subiendo Encriptado 3D";
+"FaceTec_presession_brighten_your_environment"="Poca Iluminación";
+"FaceTec_presession_conditions_too_bright"="Entorno demasiado brillante";
+"FaceTec_presession_eyes_straight_ahead"="Mire de frente";
+"FaceTec_presession_frame_your_face"="Enmarque su rostro en el Óvalo";
+"FaceTec_presession_hold_steady_1"="Manténgase firme furante: 1";
+"FaceTec_presession_hold_steady_2"="Manténgase firme furante: 2";
+"FaceTec_presession_hold_steady_3"="Manténgase firme furante: 3";
+"FaceTec_presession_neutral_expression"="Expresión neutral, no sonría";
+"FaceTec_presession_position_face_straight_in_oval"="Mire de frente";
+"FaceTec_presession_remove_dark_glasses"="Retire sus lentes oscuros";
+"FaceTec_retry_header"="Déjame intentar de nuevo";
+"FaceTec_retry_ideal_image_label"="Pose ideal";
+"FaceTec_retry_instruction_message_1"="Expresión neutral, no sonría";
+"FaceTec_retry_instruction_message_2"="Sin deslumbramiento\no\niluminación extrema";
+"FaceTec_retry_subheader_message"="Eche un vistazo a su foto\ny corrija su entorno.";
+"FaceTec_retry_your_image_label"="Tu Selfie";

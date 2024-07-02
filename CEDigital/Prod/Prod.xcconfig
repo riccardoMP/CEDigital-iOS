@@ -1,0 +1,24 @@
+//
+//  Prod.xcconfig
+//  CEDigital
+//
+//  Created by Riccardo Mija Padilla on 9/4/20.
+//  Copyright © 2020 Riccardo Mija Padilla. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+XCC_ROOT_URL = https:/$()/devolucionesenlinea.migraciones.gob.pe/documentodigital/
+
+
+XCC_ENVIROMENT = 
+
+XCC_FACE_TOKEN = PzrfvFm%aE$W9R6CNQtxnw%NAE5ZEjPn%$$f6pS$*Gq+XpmtHrggyKEssP$jMzD
+XCC_VERIDIUM_CONFIG_DEVICE_KEY = dv0SWjRKkJDfCajVbsy2616NxPP32beg
+
+XCC_VERIDIUM_CONFIG_PRODUCT_KEY = appId = pe.gob.migraciones.cedigital.CEDigital,pe.gob.migraciones.cedigital$_expiryDate = 2022-07-10$_key = 003045022100b92e571639ed0aeb40a01495a94808b5a5c896690a888bc4ba5bf2053e6f81d902206b8d2934b572bf2d6aeec80d82ba7697731b921f7846820590160cde746bbb4c
+
+
+//We use the $_ value tu replace in swift code with a line break
+XCC_VERIDIUM_CONFIG_PUBLIC_KEY = -----BEGIN PUBLIC KEY-----$_MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArt5OScoZuxAvwiY81iHn$_2oUy/hcnrASOMRAURt5EBwr2VBE4qpEUe8xH5Et3B/b3mhSA7AUt69ltXwQWZg4G$_hU5foy7cqLfyhqq+gtG/CZCYU1RVL6NbGZzogVtKpRbKw8NlbLIaZAz/YOtCkc+e$_0IMpSsI9lyVPuIH4ekcbq4ne7OovA8VogjGQoGDhoFlNW+3wjhTB6KjD3ASafI3B$_5Dclgvs0dn/l7OlZuQFSLvSJWqNAmobhFbuq7CvzdfzqV/78h/aSLjIwwUEz6Cjz$_YG7i+DmOyCJWxuk961/sosDkhL5aOwU+3DcpjPmEUJCuGRn9Wr4wWQhv/xzhBPlt$_yQIDAQAB$_-----END PUBLIC KEY-----

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CETitleValueView" customModule="CEDigital" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTitle" destination="30W-C4-xOK" id="8Dh-5O-aMT"/>
+                <outlet property="lblValue" destination="VPd-Ce-Sco" id="x00-Aw-Hpx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="04j-bu-Kvx">
+            <rect key="frame" x="0.0" y="0.0" width="629" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30W-C4-xOK">
+                    <rect key="frame" x="0.0" y="44" width="629" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-Ce-Sco">
+                    <rect key="frame" x="6.5" y="64.5" width="616" height="173.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="XD9-uk-Q0b"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VPd-Ce-Sco" firstAttribute="top" secondItem="30W-C4-xOK" secondAttribute="bottom" id="Mfk-iU-Vth"/>
+                <constraint firstItem="30W-C4-xOK" firstAttribute="width" secondItem="XD9-uk-Q0b" secondAttribute="width" id="U84-1H-EAc"/>
+                <constraint firstItem="30W-C4-xOK" firstAttribute="top" secondItem="XD9-uk-Q0b" secondAttribute="top" id="coX-FT-nHY"/>
+                <constraint firstItem="VPd-Ce-Sco" firstAttribute="width" secondItem="XD9-uk-Q0b" secondAttribute="width" multiplier="0.98" id="ivR-FM-TCb"/>
+                <constraint firstItem="XD9-uk-Q0b" firstAttribute="bottom" secondItem="VPd-Ce-Sco" secondAttribute="bottom" id="lAF-9a-ypK"/>
+                <constraint firstItem="VPd-Ce-Sco" firstAttribute="centerX" secondItem="XD9-uk-Q0b" secondAttribute="centerX" id="pK2-dL-lvr"/>
+                <constraint firstItem="30W-C4-xOK" firstAttribute="centerX" secondItem="XD9-uk-Q0b" secondAttribute="centerX" id="xIL-j6-fcj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="316.66666666666669" y="-62.276785714285708"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,22 @@
+//
+//  QA.xcconfig
+//  CEDigital
+//
+//  Created by Riccardo Mija Padilla on 9/4/20.
+//  Copyright © 2020 Riccardo Mija Padilla. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+XCC_ROOT_URL = http:/$()/181.176.222.215:8080/documentodigital-qa/
+XCC_ENVIROMENT = QA
+
+
+XCC_FACE_TOKEN = eR85WJZ9tXY@Wcrhj5BHxpu$!hnePz-+C=&VdFLGNLwmq&R_=utep5QAU!LfR5Pd
+XCC_VERIDIUM_CONFIG_DEVICE_KEY = dIyb75e8NIe22ZwOg8mkvSnEyAmkaUsF
+
+XCC_VERIDIUM_CONFIG_PRODUCT_KEY = appId = *$_expiryDate = 2022-07-10$_key = 003046022100a6cbfabe3e0ff2965c20ff5b1a82c308be6d0fac85a1b42a082287f66b4f124b02210085d1384d2a1727cbcf67407bfa2e92ceff3de3f5f4f2dc86b23fd92a960331c4
+
+//We use the $_ value tu replace in swift code with a line break
+XCC_VERIDIUM_CONFIG_PUBLIC_KEY = -----BEGIN PUBLIC KEY-----$_MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmmUrqcL1o/9uX/Vt4ZZA$_aUgNP3efLb8OunpsaREwmYfYtDGeJ0q0uU01olrFG5EbF6yiQDyR/VKppaXXcBeP$_Wtc4StINWEISSGCCJ9iyWpzGzK8s6lXn3xLrNijdGCpvryOC8lqJkplOAqNgb5tG$_NpgGunCgXemrjCO3hzxn84b+h+gPe7lzN0epU/Kc5O04ujySJSBpA2Rn2y+Egd/W$_Oi9zkgeDDzsBFAXdwFdT/c3re3b1cLPfqdJOiH6IpTOrjPmozEmAEpeQKWq2jGsJ$_Rs9HINuXW3IYccBviI/SgpaQ0LAzktC3xb7s5lNJmJ0O5YnnyYZ3Un+9ZcoqhoN2$_DwIDAQAB$_-----END PUBLIC KEY-----

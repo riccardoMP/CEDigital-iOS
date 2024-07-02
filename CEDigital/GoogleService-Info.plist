@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CLIENT_ID</key>
+    <string>694270972995-rmvnuhdnftp1i3smvupr5mjuksl91cuv.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.694270972995-rmvnuhdnftp1i3smvupr5mjuksl91cuv</string>
+    <key>ANDROID_CLIENT_ID</key>
+    <string>694270972995-tk9tqq5b467qoj0jk1tak5t7o1hfi44e.apps.googleusercontent.com</string>
+    <key>API_KEY</key>
+    <string>AIzaSyBw2vUC5UDJo4j-AHQ1JzE0XMno2Q_3QYU</string>
+    <key>GCM_SENDER_ID</key>
+    <string>694270972995</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>pe.gob.migraciones.cedigital.CEDigital</string>
+    <key>PROJECT_ID</key>
+    <string>carne-extranjeria-digita-a1c44</string>
+    <key>STORAGE_BUCKET</key>
+    <string>carne-extranjeria-digita-a1c44.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:694270972995:ios:0f61b8974de6c8d719f0f6</string>
+    <key>DATABASE_URL</key>
+    <string>https://carne-extranjeria-digita-a1c44.firebaseio.com</string>
+</dict>
+</plist>
