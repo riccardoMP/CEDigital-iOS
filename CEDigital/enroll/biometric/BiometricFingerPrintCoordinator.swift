@@ -25,10 +25,10 @@ class BiometricFingerPrintCoordinator: Coordinator {
     
     func start() {
         
-        let vc = BiometricFingerPrintViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
+        /*let vc = BiometricFingerPrintViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self
         vc.registerPost = registerPost
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: true)*/
     }
     
     

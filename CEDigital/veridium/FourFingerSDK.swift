@@ -6,7 +6,8 @@
 //  Copyright © 2021 Riccardo Mija Padilla. All rights reserved.
 //
 
-import Foundation
+
+/*import Foundation
 import VeridiumCore
 import Veridium4FBiometrics
 import AVFoundation
@@ -199,3 +200,4 @@ class FourFingerSDK {
     
 }
 
+*/

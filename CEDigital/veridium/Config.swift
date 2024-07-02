@@ -6,7 +6,7 @@
 //  Copyright © 2021 Riccardo Mija Padilla. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 import Foundation
 import FaceTecSDK
 
@@ -93,3 +93,4 @@ class Config {
     static let wasSDKConfiguredWithConfigWizard = false
 }
 
+*/

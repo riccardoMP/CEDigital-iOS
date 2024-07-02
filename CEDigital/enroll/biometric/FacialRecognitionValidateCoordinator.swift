@@ -25,10 +25,10 @@ class FacialRecognitionValidateCoordinator: Coordinator {
     
     func start() {
         
-        let vc = FacialRecognitionValidateViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
+        /*let vc = FacialRecognitionValidateViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self
         vc.registerPost = registerPost
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: true)*/
     }
     
     

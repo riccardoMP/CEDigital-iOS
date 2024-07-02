@@ -5,7 +5,7 @@
 //  Created by Riccardo Mija Padilla on 4/10/21.
 //  Copyright © 2021 Riccardo Mija Padilla. All rights reserved.
 //
-
+/*
 import UIKit
 import Lottie
 import Photos
@@ -177,3 +177,4 @@ extension BiometricFingerPrintViewController : FourFingerProtocol {
     
     
 }
+*/

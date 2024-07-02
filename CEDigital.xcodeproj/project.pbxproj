@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,12 +32,6 @@
 		C7459C36272365B3007A0004 /* FacialValidationMigrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7459C35272365B3007A0004 /* FacialValidationMigrationResponse.swift */; };
 		C75D35B3256C6689005DF3CB /* JsonFireBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D35B2256C6689005DF3CB /* JsonFireBaseResponse.swift */; };
 		C763889E2707BB67001A2ED1 /* CEFloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C763889D2707BB67001A2ED1 /* CEFloatingPlaceholderTextField.swift */; };
-		C76531CB270CD3E900664C3C /* Veridium4FBiometrics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B21270CC25C00103C32 /* Veridium4FBiometrics.xcframework */; };
-		C76531CC270CD3E900664C3C /* Veridium4FBiometrics.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B21270CC25C00103C32 /* Veridium4FBiometrics.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C76531CD270CD3EC00664C3C /* VeridiumAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B22270CC25C00103C32 /* VeridiumAnalytics.xcframework */; };
-		C76531CE270CD3EC00664C3C /* VeridiumAnalytics.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B22270CC25C00103C32 /* VeridiumAnalytics.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C76531CF270CD3EC00664C3C /* VeridiumCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B24270CC25C00103C32 /* VeridiumCore.xcframework */; };
-		C76531D0270CD3EC00664C3C /* VeridiumCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7039B24270CC25C00103C32 /* VeridiumCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7678DDC24FB2B9100F3CF8A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7678DDB24FB2B9100F3CF8A /* LoginResponse.swift */; };
 		C7678DDE24FB2B9E00F3CF8A /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7678DDD24FB2B9E00F3CF8A /* UserLogin.swift */; };
 		C7678DE024FB2C3000F3CF8A /* LoginPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7678DDF24FB2C3000F3CF8A /* LoginPost.swift */; };
@@ -102,8 +96,6 @@
 		C792E585271DCEA800E7382E /* FacialRecognitionValidateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792E584271DCEA800E7382E /* FacialRecognitionValidateCoordinator.swift */; };
 		C792E588271DDC3700E7382E /* FingerPrintDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C792E587271DDC3700E7382E /* FingerPrintDummy.json */; };
 		C7952BD32742CFBE0099348E /* GenerateCodeByPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7952BD22742CFBE0099348E /* GenerateCodeByPicker.swift */; };
-		C7A301962757715500D3A8C2 /* Veridium4FUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A301952757715500D3A8C2 /* Veridium4FUI.framework */; platformFilter = ios; };
-		C7A301972757715500D3A8C2 /* Veridium4FUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A301952757715500D3A8C2 /* Veridium4FUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A3019A27578CA000D3A8C2 /* UpdateInformationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3019927578CA000D3A8C2 /* UpdateInformationCoordinator.swift */; };
 		C7A3019C27578CC200D3A8C2 /* UpdateInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3019B27578CC200D3A8C2 /* UpdateInformationViewController.swift */; };
 		C7A38DD324F72C4900DAA519 /* ParametryCE.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38DD224F72C4900DAA519 /* ParametryCE.swift */; };
@@ -127,8 +119,6 @@
 		C7B62FB2250851CB00865EDF /* UpdatePasswordPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B62FB1250851CB00865EDF /* UpdatePasswordPost.swift */; };
 		C7C0BA1E273F176300C62A42 /* EnrollSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0BA1D273F176300C62A42 /* EnrollSuccessViewController.swift */; };
 		C7C0BA20273F177E00C62A42 /* EnrollSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0BA1F273F177E00C62A42 /* EnrollSuccessCoordinator.swift */; };
-		C7C1FF3F272084970012A96C /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C1FF3E272084970012A96C /* FaceTecSDK.xcframework */; };
-		C7C1FF40272084970012A96C /* FaceTecSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7C1FF3E272084970012A96C /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7C1FF422720850B0012A96C /* EnrollmentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1FF412720850B0012A96C /* EnrollmentProcessor.swift */; };
 		C7C1FF442720852E0012A96C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1FF432720852E0012A96C /* Config.swift */; };
 		C7C1FF46272088300012A96C /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1FF45272088300012A96C /* ProcesingDelegate.swift */; };
@@ -188,24 +178,6 @@
 		C7F725DD250A88B7003144E9 /* PersonalDataCEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F725DC250A88B7003144E9 /* PersonalDataCEView.swift */; };
 		C7F725DF250A88BF003144E9 /* PersonalDataCEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F725DE250A88BF003144E9 /* PersonalDataCEView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C785BFAB270CBF1900ACB21A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C76531CC270CD3E900664C3C /* Veridium4FBiometrics.xcframework in Embed Frameworks */,
-				C7A301972757715500D3A8C2 /* Veridium4FUI.framework in Embed Frameworks */,
-				C76531D0270CD3EC00664C3C /* VeridiumCore.xcframework in Embed Frameworks */,
-				C76531CE270CD3EC00664C3C /* VeridiumAnalytics.xcframework in Embed Frameworks */,
-				C7C1FF40272084970012A96C /* FaceTecSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09C75058AC234C73ABB2A4A1 /* Pods-CEDigital.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDigital.qa.xcconfig"; path = "Target Support Files/Pods-CEDigital/Pods-CEDigital.qa.xcconfig"; sourceTree = "<group>"; };
@@ -400,12 +372,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C1FF3F272084970012A96C /* FaceTecSDK.xcframework in Frameworks */,
-				C76531CB270CD3E900664C3C /* Veridium4FBiometrics.xcframework in Frameworks */,
-				C76531CF270CD3EC00664C3C /* VeridiumCore.xcframework in Frameworks */,
-				C76531CD270CD3EC00664C3C /* VeridiumAnalytics.xcframework in Frameworks */,
 				2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */,
-				C7A301962757715500D3A8C2 /* Veridium4FUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,7 +1077,6 @@
 				C7EA33DB24E05C41002EE73D /* Frameworks */,
 				C7EA33DC24E05C41002EE73D /* Resources */,
 				BD49B5F20B65FC35F5EE1577 /* [CP] Embed Pods Frameworks */,
-				C785BFAB270CBF1900ACB21A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1495,7 +1461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1503,7 +1469,7 @@
 				);
 				INFOPLIST_FILE = CEDigital/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1647,7 +1613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1655,7 +1621,7 @@
 				);
 				INFOPLIST_FILE = CEDigital/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1676,7 +1642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1684,7 +1650,7 @@
 				);
 				INFOPLIST_FILE = CEDigital/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

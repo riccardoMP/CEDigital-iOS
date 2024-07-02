@@ -1065,7 +1065,6 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30911.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleIDFASupport (3.14.0)
   - GoogleUtilities/AppDelegateSwizzler (7.13.3):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -1175,74 +1174,74 @@ PODS:
   - IQKeyboardManagerSwift (6.5.16)
   - leveldb-library (1.22.5)
   - lottie-ios (4.4.1)
-  - MaterialComponents/AnimationTiming (124.2.0)
-  - MaterialComponents/Availability (124.2.0)
-  - MaterialComponents/private/Application (124.2.0)
-  - MaterialComponents/private/Color (124.2.0):
+  - MaterialComponents/AnimationTiming (116.0.1)
+  - MaterialComponents/Availability (116.0.1)
+  - MaterialComponents/private/Application (116.0.1)
+  - MaterialComponents/private/Color (116.0.1):
     - MaterialComponents/Availability
-  - MaterialComponents/private/Math (124.2.0)
-  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (124.2.0)":
+  - MaterialComponents/private/Math (116.0.1)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (116.0.1)":
     - MaterialComponents/AnimationTiming
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
-  - "MaterialComponents/private/TextControlsPrivate+FilledStyle (124.2.0)":
+  - "MaterialComponents/private/TextControlsPrivate+FilledStyle (116.0.1)":
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
     - "MaterialComponents/private/TextControlsPrivate+UnderlinedStyle"
-  - "MaterialComponents/private/TextControlsPrivate+Shared (124.2.0)":
+  - "MaterialComponents/private/TextControlsPrivate+Shared (116.0.1)":
     - MaterialComponents/AnimationTiming
     - MaterialComponents/private/Math
     - "MaterialComponents/TextControls+Enums"
-  - "MaterialComponents/private/TextControlsPrivate+TextFields (124.2.0)":
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (116.0.1)":
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
-  - "MaterialComponents/private/TextControlsPrivate+UnderlinedStyle (124.2.0)":
+  - "MaterialComponents/private/TextControlsPrivate+UnderlinedStyle (116.0.1)":
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
-  - MaterialComponents/schemes/Color (124.2.0):
+  - MaterialComponents/schemes/Color (116.0.1):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
-  - MaterialComponents/schemes/Container (124.2.0):
+  - MaterialComponents/schemes/Container (116.0.1):
     - MaterialComponents/schemes/Color
     - MaterialComponents/schemes/Shape
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/schemes/Shape (124.2.0):
+  - MaterialComponents/schemes/Shape (116.0.1):
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - MaterialComponents/schemes/Typography (124.2.0):
+  - MaterialComponents/schemes/Typography (116.0.1):
     - "MaterialComponents/schemes/Typography+BasicFontScheme"
     - "MaterialComponents/schemes/Typography+Scheming"
     - MaterialComponents/Typography
-  - "MaterialComponents/schemes/Typography+BasicFontScheme (124.2.0)"
-  - "MaterialComponents/schemes/Typography+Scheming (124.2.0)"
-  - MaterialComponents/ShadowElevations (124.2.0)
-  - MaterialComponents/ShadowLayer (124.2.0):
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (116.0.1)"
+  - "MaterialComponents/schemes/Typography+Scheming (116.0.1)"
+  - MaterialComponents/ShadowElevations (116.0.1)
+  - MaterialComponents/ShadowLayer (116.0.1):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (124.2.0):
+  - MaterialComponents/ShapeLibrary (116.0.1):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (124.2.0):
+  - MaterialComponents/Shapes (116.0.1):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - "MaterialComponents/TextControls+BaseTextFields (124.2.0)":
+  - "MaterialComponents/TextControls+BaseTextFields (116.0.1)":
     - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
     - "MaterialComponents/private/TextControlsPrivate+Shared"
     - "MaterialComponents/private/TextControlsPrivate+TextFields"
     - MDFInternationalization
-  - "MaterialComponents/TextControls+Enums (124.2.0)"
-  - "MaterialComponents/TextControls+FilledTextFields (124.2.0)":
+  - "MaterialComponents/TextControls+Enums (116.0.1)"
+  - "MaterialComponents/TextControls+FilledTextFields (116.0.1)":
     - MaterialComponents/Availability
     - "MaterialComponents/private/TextControlsPrivate+FilledStyle"
     - "MaterialComponents/TextControls+BaseTextFields"
-  - "MaterialComponents/TextControls+FilledTextFieldsTheming (124.2.0)":
+  - "MaterialComponents/TextControls+FilledTextFieldsTheming (116.0.1)":
     - MaterialComponents/schemes/Container
     - "MaterialComponents/TextControls+FilledTextFields"
-  - MaterialComponents/Typography (124.2.0):
+  - MaterialComponents/Typography (116.0.1):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
     - MDFTextAccessibility
@@ -1263,17 +1262,16 @@ PODS:
 
 DEPENDENCIES:
   - ActiveLabel
-  - Alamofire (~> 5.5)
+  - Alamofire
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crashlytics
   - Firebase/Firestore
   - FirebaseFirestoreSwift
-  - GoogleIDFASupport
   - IQKeyboardManagerSwift
   - lottie-ios
-  - "MaterialComponents/TextControls+FilledTextFields"
-  - "MaterialComponents/TextControls+FilledTextFieldsTheming"
+  - "MaterialComponents/TextControls+FilledTextFields (~> 116.0.1)"
+  - "MaterialComponents/TextControls+FilledTextFieldsTheming (~> 116.0.1)"
   - ReachabilitySwift
   - SwiftyRSA
 
@@ -1299,7 +1297,6 @@ SPEC REPOS:
     - FirebaseSharedSwift
     - GoogleAppMeasurement
     - GoogleDataTransport
-    - GoogleIDFASupport
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
@@ -1336,14 +1333,13 @@ SPEC CHECKSUMS:
   FirebaseSharedSwift: 48de4aec81a6b79bb30404e5e6db43ea74848fed
   GoogleAppMeasurement: 55a4a3c8000c1280d68bf4c084adbfef20c49db1
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
-  GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   "gRPC-C++": e725ef63c4475d7cdb7e2cf16eb0fde84bd9ee51
   gRPC-Core: eee4be35df218649fe66d721a05a7f27a28f069b
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   leveldb-library: e8eadf9008a61f9e1dde3978c086d2b6d9b9dc28
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
-  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  MaterialComponents: a8759fa4dd253b6026648730ec0252c428dee589
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
@@ -1352,6 +1348,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
 
-PODFILE CHECKSUM: ba100a85bf8ab21b94a1f4ce567027b95e86310e
+PODFILE CHECKSUM: e54db3af3d07dfa992535eba4e5c55aa0c60ecf2
 
 COCOAPODS: 1.13.0
