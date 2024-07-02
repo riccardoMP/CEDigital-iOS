@@ -12,6 +12,11 @@
 		B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3B2C349D290019CDA9 /* Reachability */; };
 		B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */; };
 		B85FCF422C349F8B0019CDA9 /* UIDeviceComplete in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF412C349F8B0019CDA9 /* UIDeviceComplete */; };
+		B85FCF452C34A1CE0019CDA9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF442C34A1CE0019CDA9 /* FirebaseAnalytics */; };
+		B85FCF472C34A1CE0019CDA9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF462C34A1CE0019CDA9 /* FirebaseCrashlytics */; };
+		B85FCF492C34A1CE0019CDA9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF482C34A1CE0019CDA9 /* FirebaseFirestore */; };
+		B85FCF4C2C34A4750019CDA9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF4B2C34A4750019CDA9 /* Lottie */; };
+		B85FCF4F2C34A5880019CDA9 /* SwiftyRSA in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF4E2C34A5880019CDA9 /* SwiftyRSA */; };
 		C709258A2732DDD800387093 /* PopUpResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70925892732DDD800387093 /* PopUpResponseProtocol.swift */; };
 		C70DC3882914594D00980DD7 /* EnrollResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DC3872914594D00980DD7 /* EnrollResponse.swift */; };
 		C722407C2502E2D100AC0A8E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722407B2502E2D100AC0A8E /* Environment.swift */; };
@@ -378,7 +383,12 @@
 			files = (
 				2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */,
 				B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */,
+				B85FCF4C2C34A4750019CDA9 /* Lottie in Frameworks */,
+				B85FCF4F2C34A5880019CDA9 /* SwiftyRSA in Frameworks */,
+				B85FCF452C34A1CE0019CDA9 /* FirebaseAnalytics in Frameworks */,
+				B85FCF472C34A1CE0019CDA9 /* FirebaseCrashlytics in Frameworks */,
 				B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */,
+				B85FCF492C34A1CE0019CDA9 /* FirebaseFirestore in Frameworks */,
 				B85FCF392C349A8E0019CDA9 /* Alamofire in Frameworks */,
 				B85FCF422C349F8B0019CDA9 /* UIDeviceComplete in Frameworks */,
 			);
@@ -1085,6 +1095,7 @@
 				C7EA33DB24E05C41002EE73D /* Frameworks */,
 				C7EA33DC24E05C41002EE73D /* Resources */,
 				BD49B5F20B65FC35F5EE1577 /* [CP] Embed Pods Frameworks */,
+				B85FCF502C34A5E40019CDA9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1096,6 +1107,11 @@
 				B85FCF3B2C349D290019CDA9 /* Reachability */,
 				B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */,
 				B85FCF412C349F8B0019CDA9 /* UIDeviceComplete */,
+				B85FCF442C34A1CE0019CDA9 /* FirebaseAnalytics */,
+				B85FCF462C34A1CE0019CDA9 /* FirebaseCrashlytics */,
+				B85FCF482C34A1CE0019CDA9 /* FirebaseFirestore */,
+				B85FCF4B2C34A4750019CDA9 /* Lottie */,
+				B85FCF4E2C34A5880019CDA9 /* SwiftyRSA */,
 			);
 			productName = CEDigital;
 			productReference = C7EA33DE24E05C41002EE73D /* CEDigital.app */;
@@ -1132,6 +1148,9 @@
 				B85FCF3A2C349D290019CDA9 /* XCRemoteSwiftPackageReference "Reachability" */,
 				B85FCF3D2C349E370019CDA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				B85FCF402C349F8B0019CDA9 /* XCRemoteSwiftPackageReference "UIDeviceComplete" */,
+				B85FCF432C34A1CE0019CDA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B85FCF4A2C34A4750019CDA9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				B85FCF4D2C34A5880019CDA9 /* XCRemoteSwiftPackageReference "SwiftyRSA" */,
 			);
 			productRefGroup = C7EA33DF24E05C41002EE73D /* Products */;
 			projectDirPath = "";
@@ -1202,6 +1221,28 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B85FCF502C34A5E40019CDA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 		BD49B5F20B65FC35F5EE1577 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1482,6 +1523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1636,6 +1678,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1745,6 +1788,30 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		B85FCF432C34A1CE0019CDA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.1;
+			};
+		};
+		B85FCF4A2C34A4750019CDA9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+		B85FCF4D2C34A5880019CDA9 /* XCRemoteSwiftPackageReference "SwiftyRSA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TakeScoop/SwiftyRSA";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1767,6 +1834,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B85FCF402C349F8B0019CDA9 /* XCRemoteSwiftPackageReference "UIDeviceComplete" */;
 			productName = UIDeviceComplete;
+		};
+		B85FCF442C34A1CE0019CDA9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF432C34A1CE0019CDA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B85FCF462C34A1CE0019CDA9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF432C34A1CE0019CDA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		B85FCF482C34A1CE0019CDA9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF432C34A1CE0019CDA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B85FCF4B2C34A4750019CDA9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF4A2C34A4750019CDA9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		B85FCF4E2C34A5880019CDA9 /* SwiftyRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85FCF4D2C34A5880019CDA9 /* XCRemoteSwiftPackageReference "SwiftyRSA" */;
+			productName = SwiftyRSA;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

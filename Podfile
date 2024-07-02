@@ -13,17 +13,7 @@ end
 
 target 'CEDigital' do
   
-  pod 'FirebaseFirestoreSwift'
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Analytics'
-
-  
   pod 'ActiveLabel'
-  pod 'SwiftyRSA'
-  
-  pod 'lottie-ios'
   
   pod 'MaterialComponents/TextControls+FilledTextFields', '~> 116.0.1'
   pod 'MaterialComponents/TextControls+FilledTextFieldsTheming', '~> 116.0.1'

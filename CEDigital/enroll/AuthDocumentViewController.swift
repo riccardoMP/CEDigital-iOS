@@ -34,6 +34,7 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         self.initializeUI()
         self.setup()
         self.setupViewModel()
+        
     }
     
     
