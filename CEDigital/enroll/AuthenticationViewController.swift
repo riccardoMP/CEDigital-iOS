@@ -10,16 +10,13 @@ import UIKit
 
 class AuthenticationViewController: GenericViewController, ViewControllerProtocol {
     
-    
     var coordinator: AuthenticationFlow?
     var showDialogLogout:Bool?
     
     
-
     @IBOutlet weak var contentView: UIView!
     
     private lazy var CEDocumentViewController: AuthDocumentViewController = {
-        
         
         let vc = AuthDocumentViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self.coordinator
@@ -27,12 +24,10 @@ class AuthenticationViewController: GenericViewController, ViewControllerProtoco
         vc.imageDocument = "img_ce"
         
         
-    
         self.add(asChildViewController: vc)
         
         return vc
     }()
-    
     
     
     
@@ -42,37 +37,29 @@ class AuthenticationViewController: GenericViewController, ViewControllerProtoco
         
         self.initializeUI()
         self.setup()
-        
     }
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         AppUtils.lockOrientation(.portrait)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         AppUtils.lockOrientation(.all)
     }
     
     // MARK: - Method
     
     func initializeUI() {
-        
         self.titleNavigationBar(title: "auth_title".localized)
         
         self.add(asChildViewController: self.CEDocumentViewController)
-        
-        
     }
     
     func setup() {
-        
         if(showDialogLogout ?? false){
             showMsgAlert(title: "general_oops".localized, message: "general_session_logout".localized, dismissAnimated: false)
         }

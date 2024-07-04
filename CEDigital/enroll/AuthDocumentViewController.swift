@@ -69,7 +69,7 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
     }
     
     func setup() {
-        eteMaterialDocument.textInput.text = "002836377"
+        //eteMaterialDocument.textInput.text = "007889711"
         eteMaterialDocument.setup(typeEditText)
     }
     
@@ -122,27 +122,24 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
              .build())*/
             
             
-            self.coordinator?.coordinateToFacialValidation(registerPost: self.registerPost
+            /*self.coordinator?.coordinateToFacialValidation(registerPost: self.registerPost
              .setEmail(sCorreo: userCE!.sEmail)
              .setPhone(sNumero: userCE!.sTelefono)
              .setIdDocument(sIdDocumento: (self.typeDocument)!)
              .setCarnetDoc(sNumeroDoc: userCE!.sNumeroCarnet)
              .setUID(uidPersona: userCE!.uIdPersona)
              .setDeviceCode(sCodeDispositivo: AppPreferences.shared.parametryCEObject.uuid)
-             .build())
+             .build())*/
             
             
-            /*self.coordinator?.coordinateToGeneratePassword(registerPost: self.registerPost
+            self.coordinator?.coordinateToGeneratePassword(registerPost: self.registerPost
                 .setEmail(sCorreo: userCE!.sEmail)
                 .setPhone(sNumero: userCE!.sTelefono)
                 .setIdDocument(sIdDocumento: (self.typeDocument)!)
                 .setCarnetDoc(sNumeroDoc: userCE!.sNumeroCarnet)
                 .setUID(uidPersona: userCE!.uIdPersona)
                 .setDeviceCode(sCodeDispositivo: AppPreferences.shared.parametryCEObject.uuid)
-                .build())*/
-            
-            
-            
+                .build())
         }
         
         
@@ -188,7 +185,6 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         
         if(isValid()){
             
-            
             if(eteMaterialDocument.textInput.text! == Constants.APPLE_DOCUMENT_CE ){
                 
                 ParametryCEFluentBuilder(builder: AppPreferences.shared.parametryCEObject)
@@ -212,9 +208,6 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
             
         }
     }
-    
-    
-    
     
 }
 
