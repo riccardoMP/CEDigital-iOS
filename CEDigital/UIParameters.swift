@@ -118,14 +118,9 @@ public struct UIParameters{
     
     
     //Type Font
-    static var TTF_REGULAR_CE = "Sarabun-Regular"
-    static var TTF_REGULAR = "Humanist777BT-RomanB"
-    
-    static var TTF_LIGHT = "Sarabun-Light"
-    static var TTF_MEDIUM = "Sarabun-Medium"
-    static var TTF_BOLD_CE = "Sarabun-Bold"
-    static var TTF_BOLD = "Humanist521BT-Bold"
-    static var TTF_SEMI_BOLD = "Sarabun-SemiBold"
+    static var TTF_REGULAR = "Roboto-Regular"
+    static var TTF_LIGHT = "Roboto-Light"
+    static var TTF_BOLD = "Roboto-Bold"
     
     static var SIZE_FACTOR_NORMAL = CGFloat(1.0) // 100%
     static var SIZE_FACTOR_SMALL  = CGFloat(0.85) // 85%

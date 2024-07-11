@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449DFBC95928A35564961013 /* Pods_CEDigital.framework */; };
 		B85FCF392C349A8E0019CDA9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF382C349A8E0019CDA9 /* Alamofire */; };
 		B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3B2C349D290019CDA9 /* Reachability */; };
 		B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF3E2C349E370019CDA9 /* IQKeyboardManagerSwift */; };
@@ -17,6 +16,11 @@
 		B85FCF492C34A1CE0019CDA9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF482C34A1CE0019CDA9 /* FirebaseFirestore */; };
 		B85FCF4C2C34A4750019CDA9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF4B2C34A4750019CDA9 /* Lottie */; };
 		B85FCF4F2C34A5880019CDA9 /* SwiftyRSA in Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF4E2C34A5880019CDA9 /* SwiftyRSA */; };
+		B89BDF222C4088C700153CF6 /* Pods_CEDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449DFBC95928A35564961013 /* Pods_CEDigital.framework */; };
+		B89BDF252C408AA800153CF6 /* SwiftyRSA in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B85FCF4E2C34A5880019CDA9 /* SwiftyRSA */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B89BDF292C40917600153CF6 /* roboto-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF262C4090CE00153CF6 /* roboto-light.ttf */; };
+		B89BDF2A2C40917C00153CF6 /* roboto-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF272C4090CE00153CF6 /* roboto-regular.ttf */; };
+		B89BDF2B2C40917F00153CF6 /* roboto-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF282C4090CE00153CF6 /* roboto-bold.ttf */; };
 		C709258A2732DDD800387093 /* PopUpResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70925892732DDD800387093 /* PopUpResponseProtocol.swift */; };
 		C70DC3882914594D00980DD7 /* EnrollResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DC3872914594D00980DD7 /* EnrollResponse.swift */; };
 		C722407C2502E2D100AC0A8E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722407B2502E2D100AC0A8E /* Environment.swift */; };
@@ -61,8 +65,6 @@
 		C77045A8252BB4FF003AB44A /* UnlinkDevicePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77045A7252BB4FF003AB44A /* UnlinkDevicePost.swift */; };
 		C774D8AF254EFB590008AA82 /* TextImageHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774D8AE254EFB590008AA82 /* TextImageHView.swift */; };
 		C774D8B2254EFB610008AA82 /* TextImageHView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C774D8B1254EFB610008AA82 /* TextImageHView.xib */; };
-		C774D8DF254F1EAF0008AA82 /* migraciones_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C774D8DD254F1EAF0008AA82 /* migraciones_regular.ttf */; };
-		C774D8E0254F1EAF0008AA82 /* migraciones_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C774D8DE254F1EAF0008AA82 /* migraciones_bold.ttf */; };
 		C77A455B2721CBE50021F819 /* FaceTecData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77A455A2721CBE50021F819 /* FaceTecData.swift */; };
 		C77A455D27221EA50021F819 /* EnumValidateBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77A455C27221EA50021F819 /* EnumValidateBy.swift */; };
 		C77CDA1024E85E85009B8AE5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA0F24E85E85009B8AE5 /* APIRouter.swift */; };
@@ -78,11 +80,6 @@
 		C77CDA2C24E87D9D009B8AE5 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA2B24E87D9D009B8AE5 /* GenericViewController.swift */; };
 		C77CDA2F24E8839B009B8AE5 /* LabelFluentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA2E24E8839B009B8AE5 /* LabelFluentBuilder.swift */; };
 		C77CDA3124E886A6009B8AE5 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3024E886A6009B8AE5 /* color.xcassets */; };
-		C77CDA3724E88E90009B8AE5 /* sarabun_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3524E88E82009B8AE5 /* sarabun_semibold.ttf */; };
-		C77CDA3824E88E93009B8AE5 /* sarabun_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3424E88E82009B8AE5 /* sarabun_regular.ttf */; };
-		C77CDA3924E88E95009B8AE5 /* sarabun_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3224E88E82009B8AE5 /* sarabun_medium.ttf */; };
-		C77CDA3A24E88E98009B8AE5 /* sarabun_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3324E88E82009B8AE5 /* sarabun_bold.ttf */; };
-		C77CDA3B24E88E9B009B8AE5 /* sarabun_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77CDA3624E88E82009B8AE5 /* sarabun_light.ttf */; };
 		C77CDA3E24E89244009B8AE5 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA3D24E89244009B8AE5 /* ViewControllerProtocol.swift */; };
 		C77CDA4024E893A9009B8AE5 /* ButtonFluentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA3F24E893A9009B8AE5 /* ButtonFluentBuilder.swift */; };
 		C77CDA4224E89AF6009B8AE5 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDA4124E89AF6009B8AE5 /* AuthenticationCoordinator.swift */; };
@@ -188,10 +185,27 @@
 		C7F725DF250A88BF003144E9 /* PersonalDataCEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F725DE250A88BF003144E9 /* PersonalDataCEView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B8EBD83E2C4086FF00A8075C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B89BDF252C408AA800153CF6 /* SwiftyRSA in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09C75058AC234C73ABB2A4A1 /* Pods-CEDigital.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDigital.qa.xcconfig"; path = "Target Support Files/Pods-CEDigital/Pods-CEDigital.qa.xcconfig"; sourceTree = "<group>"; };
 		449DFBC95928A35564961013 /* Pods_CEDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CEDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB997151F34D1FD1EB8E343 /* Pods-CEDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDigital.release.xcconfig"; path = "Target Support Files/Pods-CEDigital/Pods-CEDigital.release.xcconfig"; sourceTree = "<group>"; };
+		B89BDF262C4090CE00153CF6 /* roboto-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-light.ttf"; sourceTree = "<group>"; };
+		B89BDF272C4090CE00153CF6 /* roboto-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-regular.ttf"; sourceTree = "<group>"; };
+		B89BDF282C4090CE00153CF6 /* roboto-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-bold.ttf"; sourceTree = "<group>"; };
 		C7039B21270CC25C00103C32 /* Veridium4FBiometrics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Veridium4FBiometrics.xcframework; path = Veridium4F/Veridium4FBiometrics.xcframework; sourceTree = "<group>"; };
 		C7039B22270CC25C00103C32 /* VeridiumAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VeridiumAnalytics.xcframework; path = Veridium4F/VeridiumAnalytics.xcframework; sourceTree = "<group>"; };
 		C7039B24270CC25C00103C32 /* VeridiumCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VeridiumCore.xcframework; path = Veridium4F/VeridiumCore.xcframework; sourceTree = "<group>"; };
@@ -243,8 +257,6 @@
 		C77045A7252BB4FF003AB44A /* UnlinkDevicePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlinkDevicePost.swift; sourceTree = "<group>"; };
 		C774D8AE254EFB590008AA82 /* TextImageHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImageHView.swift; sourceTree = "<group>"; };
 		C774D8B1254EFB610008AA82 /* TextImageHView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextImageHView.xib; sourceTree = "<group>"; };
-		C774D8DD254F1EAF0008AA82 /* migraciones_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = migraciones_regular.ttf; sourceTree = "<group>"; };
-		C774D8DE254F1EAF0008AA82 /* migraciones_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = migraciones_bold.ttf; sourceTree = "<group>"; };
 		C77A455A2721CBE50021F819 /* FaceTecData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTecData.swift; sourceTree = "<group>"; };
 		C77A455C27221EA50021F819 /* EnumValidateBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumValidateBy.swift; sourceTree = "<group>"; };
 		C77CDA0F24E85E85009B8AE5 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -260,11 +272,6 @@
 		C77CDA2B24E87D9D009B8AE5 /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		C77CDA2E24E8839B009B8AE5 /* LabelFluentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFluentBuilder.swift; sourceTree = "<group>"; };
 		C77CDA3024E886A6009B8AE5 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
-		C77CDA3224E88E82009B8AE5 /* sarabun_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sarabun_medium.ttf; sourceTree = "<group>"; };
-		C77CDA3324E88E82009B8AE5 /* sarabun_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sarabun_bold.ttf; sourceTree = "<group>"; };
-		C77CDA3424E88E82009B8AE5 /* sarabun_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sarabun_regular.ttf; sourceTree = "<group>"; };
-		C77CDA3524E88E82009B8AE5 /* sarabun_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sarabun_semibold.ttf; sourceTree = "<group>"; };
-		C77CDA3624E88E82009B8AE5 /* sarabun_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sarabun_light.ttf; sourceTree = "<group>"; };
 		C77CDA3D24E89244009B8AE5 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C77CDA3F24E893A9009B8AE5 /* ButtonFluentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFluentBuilder.swift; sourceTree = "<group>"; };
 		C77CDA4124E89AF6009B8AE5 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
@@ -381,12 +388,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AC5462A07582218CA227C7A /* Pods_CEDigital.framework in Frameworks */,
 				B85FCF3F2C349E370019CDA9 /* IQKeyboardManagerSwift in Frameworks */,
 				B85FCF4C2C34A4750019CDA9 /* Lottie in Frameworks */,
 				B85FCF4F2C34A5880019CDA9 /* SwiftyRSA in Frameworks */,
 				B85FCF452C34A1CE0019CDA9 /* FirebaseAnalytics in Frameworks */,
 				B85FCF472C34A1CE0019CDA9 /* FirebaseCrashlytics in Frameworks */,
+				B89BDF222C4088C700153CF6 /* Pods_CEDigital.framework in Frameworks */,
 				B85FCF3C2C349D290019CDA9 /* Reachability in Frameworks */,
 				B85FCF492C34A1CE0019CDA9 /* FirebaseFirestore in Frameworks */,
 				B85FCF392C349A8E0019CDA9 /* Alamofire in Frameworks */,
@@ -594,13 +601,9 @@
 		C77CDA1724E85F20009B8AE5 /* supportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C774D8DE254F1EAF0008AA82 /* migraciones_bold.ttf */,
-				C774D8DD254F1EAF0008AA82 /* migraciones_regular.ttf */,
-				C77CDA3324E88E82009B8AE5 /* sarabun_bold.ttf */,
-				C77CDA3624E88E82009B8AE5 /* sarabun_light.ttf */,
-				C77CDA3224E88E82009B8AE5 /* sarabun_medium.ttf */,
-				C77CDA3424E88E82009B8AE5 /* sarabun_regular.ttf */,
-				C77CDA3524E88E82009B8AE5 /* sarabun_semibold.ttf */,
+				B89BDF282C4090CE00153CF6 /* roboto-bold.ttf */,
+				B89BDF262C4090CE00153CF6 /* roboto-light.ttf */,
+				B89BDF272C4090CE00153CF6 /* roboto-regular.ttf */,
 				C7459C2A2723289B007A0004 /* Localizable.strings */,
 				C7459C2F27232DE5007A0004 /* FaceTec.strings */,
 			);
@@ -1095,6 +1098,7 @@
 				C7EA33DB24E05C41002EE73D /* Frameworks */,
 				C7EA33DC24E05C41002EE73D /* Resources */,
 				BD49B5F20B65FC35F5EE1577 /* [CP] Embed Pods Frameworks */,
+				B8EBD83E2C4086FF00A8075C /* Embed Frameworks */,
 				B85FCF502C34A5E40019CDA9 /* ShellScript */,
 			);
 			buildRules = (
@@ -1168,17 +1172,14 @@
 			files = (
 				C7459C282723289B007A0004 /* Localizable.strings in Resources */,
 				C7E0E28527628CB300906579 /* CETitleTextField.xib in Resources */,
-				C77CDA3824E88E93009B8AE5 /* sarabun_regular.ttf in Resources */,
-				C77CDA3A24E88E98009B8AE5 /* sarabun_bold.ttf in Resources */,
 				C7CD077B270BCB110070A8F0 /* lottie_face_recognition.json in Resources */,
-				C774D8E0254F1EAF0008AA82 /* migraciones_bold.ttf in Resources */,
-				C77CDA3924E88E95009B8AE5 /* sarabun_medium.ttf in Resources */,
 				C76EE51724FC21240018AC2F /* DigitalCard.storyboard in Resources */,
-				C77CDA3B24E88E9B009B8AE5 /* sarabun_light.ttf in Resources */,
 				C76EE51524FC10550018AC2F /* TitleValueView.xib in Resources */,
 				C7F725DF250A88BF003144E9 /* PersonalDataCEView.xib in Resources */,
+				B89BDF2B2C40917F00153CF6 /* roboto-bold.ttf in Resources */,
 				C76EE51E24FC35650018AC2F /* CETitleValueView.xib in Resources */,
 				C7EA33EE24E05C43002EE73D /* LaunchScreen.storyboard in Resources */,
+				B89BDF2A2C40917C00153CF6 /* roboto-regular.ttf in Resources */,
 				C77CDA3124E886A6009B8AE5 /* color.xcassets in Resources */,
 				C7CD0779270BCAE60070A8F0 /* lottie_fingerprint_welcome.json in Resources */,
 				C7EA33EB24E05C43002EE73D /* Assets.xcassets in Resources */,
@@ -1187,12 +1188,11 @@
 				C792E588271DDC3700E7382E /* FingerPrintDummy.json in Resources */,
 				C783096D2795DBE9000323F0 /* DisclaimerView.xib in Resources */,
 				C7D64293254DB96000948BCB /* CEBarView.xib in Resources */,
-				C77CDA3724E88E90009B8AE5 /* sarabun_semibold.ttf in Resources */,
 				C7EA33E924E05C41002EE73D /* Main.storyboard in Resources */,
 				C7CAB69324ED825100687C3B /* LectureView.xib in Resources */,
-				C774D8DF254F1EAF0008AA82 /* migraciones_regular.ttf in Resources */,
 				C774D8B2254EFB610008AA82 /* TextImageHView.xib in Resources */,
 				C7A38DD524F7332100DAA519 /* Pass.storyboard in Resources */,
+				B89BDF292C40917600153CF6 /* roboto-light.ttf in Resources */,
 				C7459C2D27232DE5007A0004 /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1522,10 +1522,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1538,7 +1537,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.10;
+				MARKETING_VERSION = 0.4.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ActiveLabel\"",
+					"-framework",
+					"\"MDFInternationalization\"",
+					"-framework",
+					"\"MDFTextAccessibility\"",
+					"-framework",
+					"\"MaterialComponents\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pe.gob.migraciones.cedigital.CEDigital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1677,10 +1688,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1693,7 +1703,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.10;
+				MARKETING_VERSION = 0.4.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ActiveLabel\"",
+					"-framework",
+					"\"MDFInternationalization\"",
+					"-framework",
+					"\"MDFTextAccessibility\"",
+					"-framework",
+					"\"MaterialComponents\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pe.gob.migraciones.cedigital.CEDigital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1707,9 +1729,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
-				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VeridiumFacial",
@@ -1722,7 +1743,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.10;
+				MARKETING_VERSION = 0.4.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ActiveLabel\"",
+					"-framework",
+					"\"MDFInternationalization\"",
+					"-framework",
+					"\"MDFTextAccessibility\"",
+					"-framework",
+					"\"MaterialComponents\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pe.gob.migraciones.cedigital.CEDigital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

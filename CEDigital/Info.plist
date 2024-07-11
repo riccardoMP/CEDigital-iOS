@@ -27,17 +27,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Esto nos permitirá registrar tus huellas y rostro para continuar con los trámites correspondientes en Migraciones.</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>migraciones_regular.ttf</string>
-		<string>migraciones_bold.ttf</string>
-		<string>sarabun_light.ttf</string>
-		<string>sarabun_medium.ttf</string>
-		<string>sarabun_regular.ttf</string>
-		<string>sarabun_semibold.ttf</string>
-		<string>sarabun_bold.ttf</string>
+		<string>roboto-light.ttf</string>
+		<string>roboto-regular.ttf</string>
+		<string>roboto-bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -64,16 +58,18 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
@@ -89,5 +85,7 @@
 	<string>${XCC_VERIDIUM_CONFIG_PRODUCT_KEY}</string>
 	<key>XCC_VERIDIUM_CONFIG_PUBLIC_KEY</key>
 	<string>${XCC_VERIDIUM_CONFIG_PUBLIC_KEY}</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>

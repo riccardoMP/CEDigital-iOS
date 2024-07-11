@@ -42,14 +42,12 @@ class GenerateCodeByPicker: NSObject {
         //Used to send a SMS to default value in the server
         if(Environment.enviroment == "general_development".localized){
             
-            let actionTesting = UIAlertAction(title: "gp_test".localized, style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            /*let actionTesting = UIAlertAction(title: "gp_test".localized, style: .default, handler: { (alert:UIAlertAction!) -> Void in
                 self.actionBlock?(EnumValidateBy.TEST)
             })
             actionTesting.setValue(UIImage(named: "ic_sms"), forKey: "image")
-            actionSheet.addAction(actionTesting)
+            actionSheet.addAction(actionTesting)*/
         }
-        
-        
         
         actionSheet.addAction(UIAlertAction(title: "general_cancel".localized, style: .cancel, handler: nil))
         
