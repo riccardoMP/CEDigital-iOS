@@ -45,9 +45,7 @@ class DisclaimerView: UIView {
     
     func initializeUI( arrayDisclaimer : [String]){
         
-        
         arrayDisclaimer.forEach {
-            
             
             var characterLabel: UILabel = {
                 let label = UILabel()
@@ -66,9 +64,6 @@ class DisclaimerView: UIView {
             stackView.addArrangedSubview(characterLabel)
             
         }
-        
-        
-        
     }
     
     

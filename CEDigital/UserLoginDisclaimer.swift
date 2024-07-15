@@ -20,12 +20,10 @@ struct UserLoginDisclaimer: Codable {
         
         if let message = msgCaducidadCE, !message.isEmpty {
             arrayDisclaimer.append(msgCaducidadCE ?? "")
-            
         }
         
         if let message = msgVencResidencia, !message.isEmpty {
             arrayDisclaimer.append(msgVencResidencia ?? "")
-            
         }
         
         return arrayDisclaimer

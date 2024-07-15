@@ -28,7 +28,7 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
     @IBOutlet weak var vProcedure: LectureView!
     @IBOutlet weak var vStatus: LectureView!
     @IBOutlet weak var butGoToWeb: UIButton!
-
+    
     
     // MARK: - CE ContentView
     private lazy var ceForwardViewController: CEForwardViewController = {
@@ -115,19 +115,24 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
             .setTextColor(UIParameters.COLOR_PRIMARY)
             .setText("dp_go_online_query".localized)
             .build()
-
-      
-   
+        
+        
+        
     }
     
     func setup() {
-        if let message = userLogin!.mensajeAdvertencia {
-            vDisclaimer.initializeUI(arrayDisclaimer: message.getArrayDisclaimer() )
+        if let arrayDisclaimer : [String] = userLogin?.mensajeAdvertencia?.getArrayDisclaimer() {
+            
+            if(arrayDisclaimer.isEmpty) {
+                vDisclaimer.removeFromSuperview()
+            }else{
+                vDisclaimer.initializeUI(arrayDisclaimer: arrayDisclaimer )
+            }
+            
         } else {
             vDisclaimer.removeFromSuperview()
         }
     }
-    
     
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
@@ -159,8 +164,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
     
     
     func changeContentView(){
-        
-        
         if(AppPreferences.init().parametryCEObject.idDocumento  == Constants.DOCUMENT_TYPE_CE){
             switch self.behaviorButton {
             case .STATE_FORWARD:

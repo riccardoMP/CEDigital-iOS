@@ -34,7 +34,9 @@ class QRLectureViewController: GenericViewController, ViewControllerProtocol {
         
         self.titleNavigationBar(title: "qr_title".localized)
         
-        self.iviQR.image = AppUtils.generateQRCode(from: "\(userLogin!.sURLQR)\(userLogin!.sEncriptado)")
+        //let qrString = "\(userLogin!.sURLQR)\(userLogin!.sEncriptado)"
+        let qrString = "https://172.27.130.155/visor-qr/consulta/\(userLogin!.sEncriptado)"
+        self.iviQR.image = AppUtils.generateQRCode(from: qrString)
         
         lblDisclaimer = LabelFluentBuilder.init(label: lblDisclaimer)
             .setTextColor(#colorLiteral(red: 0, green: 0.2823529412, blue: 0.6039215686, alpha: 1))
