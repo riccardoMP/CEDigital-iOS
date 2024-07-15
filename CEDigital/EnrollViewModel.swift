@@ -22,9 +22,6 @@ public class EnrollViewModel : BaseViewModel {
     let onValidateCodeError: Box<NetworkMessage?> = Box(nil)
     
     
-    
-    
-    
     func doDeviceInformation(post : DeviceInformationPost) {
         
         self.isViewLoading.value = true

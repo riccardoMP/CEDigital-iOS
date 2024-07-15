@@ -27,7 +27,6 @@ enum APIRouter: URLRequestConvertible {
     case unlinkDevice(post: UnlinkDevicePost)
     
     
-    
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
@@ -55,17 +54,12 @@ enum APIRouter: URLRequestConvertible {
         case .unlinkDevice:
             return .post
         }
-        
     }
     
     // MARK: - Path
-    
-    
     private var path: URL {
-        
-        
+
         switch self {
-        
         
         case .deviceInformation( _):
             
@@ -84,7 +78,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .validateDevice( _):
-            
             let path = "\(Environment.rootURL)dispositivo/validar"
             let urlComponents = URLComponents(string: path)!
             
@@ -92,7 +85,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .validationUser( _):
-            
             let path = "\(Environment.rootURL)usuario/obtenerDatos"
             let urlComponents = URLComponents(string: path)!
             
@@ -100,7 +92,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .updateUser( _):
-            
             let path = "\(Environment.rootURL)usuario/updateUser"
             let urlComponents = URLComponents(string: path)!
             
@@ -108,7 +99,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .generateCode( _):
-            
             let path = "\(Environment.rootURL)codigo/generar"
             let urlComponents = URLComponents(string: path)!
             
@@ -116,7 +106,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .validationCode( _):
-            
             let path = "\(Environment.rootURL)codigo/validar"
             let urlComponents = URLComponents(string: path)!
             
@@ -124,7 +113,6 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .registerUser( _):
-            
             let path = "\(Environment.rootURL)enrolar/usuario"
             let urlComponents = URLComponents(string: path)!
             
@@ -133,7 +121,6 @@ enum APIRouter: URLRequestConvertible {
             
             
         case .loginUser( _):
-            
             let path = "\(Environment.rootURL)usuario/login"
             let urlComponents = URLComponents(string: path)!
             
@@ -141,16 +128,13 @@ enum APIRouter: URLRequestConvertible {
             return urlComponents.url!
             
         case .updatePassword( _):
-            
             let path = "\(Environment.rootURL)usuario/actualizarClave"
             let urlComponents = URLComponents(string: path)!
             
             print(urlComponents.url!)
             return urlComponents.url!
             
-            
         case .unlinkDevice( _):
-            
             let path = "\(Environment.rootURL)dispositivo/desvincular"
             let urlComponents = URLComponents(string: path)!
             
@@ -233,9 +217,7 @@ enum APIRouter: URLRequestConvertible {
                     "sNumeroTramite": post.sNumeroTramite,
                     "tipoDocumento": post.tipoDocumento,
                     "sSO": post.sSO,
-                    
             ]
-            
             
         case .updatePassword(let post):
             return ["sClave": post.sClave,

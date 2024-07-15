@@ -86,14 +86,11 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
         if(Environment.enviroment.isEmpty){
             vEnrollAgain.removeFromSuperview()
         }
-        
-        
     }
     
     
     
     func setup() {
-        
         eteDocument.setup(TypeEditText(typeDocument: .DISABLE_DOCUMENT), .DISABLE)
         eteDocument.textInput.text = AppPreferences.init().parametryCEObject.documentNumber
         
@@ -102,11 +99,9 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
         if(showDialogLogout ?? false){
             showMsgAlert(title: "general_oops".localized, message: "general_session_logout".localized, dismissAnimated: false)
         }
-        
     }
     
     func setupViewModel(){
-        
         loginViewModel.deviceInformation.bind { [weak self]  device in
             guard device != nil else { return }
             
@@ -119,13 +114,10 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
                                       tipoDocumento: AppPreferences.init().parametryCEObject.idDocumento)
             
             self?.loginViewModel.doLoginUser(post: loginPost)
-            
         }
         
         loginViewModel.userLoginObserver.bind {[weak self]  userLogin in
-            
             guard userLogin != nil else { return }
-            
             
             //Setup Parametry
             var parametryCE = AppPreferences.init().parametryCEObject
@@ -144,8 +136,6 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
             
             guard userLogin != nil else { return }
             
-            
-            
             let  userLogin = userLogin
             userLogin!.generateDataImage()
             
@@ -157,10 +147,7 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
             
             
             self.showMsgAlert(title: "general_oops".localized, message: error!.body, dismissAnimated: true)
-            
-            
         }
-        
         
         loginViewModel.isViewLoading.bind { isViewLoading in
             guard isViewLoading != nil else { return }
@@ -171,7 +158,6 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
             }else{
                 LoadingIndicatorView.hide()
             }
-            
         }
     }
     
@@ -188,7 +174,6 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
         
         
         return isValid
-        
     }
     
     // MARK: - Action
@@ -203,9 +188,7 @@ class LoginViewController: GenericViewController, ViewControllerProtocol {
                 
                 self.loginViewModel.doDeviceInformation(post: post)
             }
-            
         }
-        
     }
     
     @IBAction func onRecoveryPassword(_ sender: Any) {

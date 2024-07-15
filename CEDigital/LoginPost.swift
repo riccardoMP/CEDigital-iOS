@@ -10,13 +10,11 @@
 import Foundation
 
 struct LoginPost: Codable {
-    
     let sClave: String
     let sCodeDispositivo: String
     let sNumeroDoc: String
     let sNumeroTramite: String
     let tipoDocumento: String
     var sSO: String = "IOS"
-    
 }
 

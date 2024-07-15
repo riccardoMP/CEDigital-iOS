@@ -145,10 +145,10 @@ class APIClient : BaseAPIClient {
                     
                     if(isGoodRequest(data: jsonData)){
                         
-                        /*if let bearerToken = response.response?.allHeaderFields[HTTPHeaderField.authentication.rawValue] as? String{
+                        if let bearerToken = response.response?.allHeaderFields[HTTPHeaderField.authentication.rawValue] as? String{
                             
                             AppPreferences.shared.bearerToken = bearerToken
-                        }*/
+                        }
                         
                         let result = try JSONDecoder().decode(T.self, from: jsonData)
                         completion(.success(result))
@@ -166,22 +166,17 @@ class APIClient : BaseAPIClient {
                     
                     NetworkManager.isUnreachable { _ in
                         completion(.failure(NetworkMessage( body: "generic_description_no_internet".localized, httpCode: SP.HTTP_CODE.NOT_INTERNET)))
-                        
                     }
                     
                     NetworkManager.isReachable { _ in
-                        
                         if let error = error as? NetworkMessage {
                             return completion(.failure(error))
                         }
+                        
                         completion(.failure(self.parseApiError(data: response.data, httpCode: response.response!.statusCode)))
                     }
-                    
-                    
                 }
             }
-        
-        
     }
     
     
@@ -204,8 +199,7 @@ class APIClient : BaseAPIClient {
     
     static func deviceInformation( post: DeviceInformationPost, completion:@escaping (Result<BaseResponse<EnrollResponse>, NetworkMessage>)->Void) {
         
-        performRequest(route: APIRouter.deviceInformation(post: post), completion: completion)
-        
+        performRequest(route: APIRouter.deviceInformation(post: post), completion: completion)   
     }
     
     static func refreshToken(  completion:@escaping (Result<Bool, NetworkMessage>)->Void) {
@@ -247,9 +241,7 @@ class APIClient : BaseAPIClient {
     }
     
     static func validationCode( post: ValidationCodePost, completion:@escaping (Result<GeneralResponse, NetworkMessage>)->Void) {
-        
         performRequest(route: APIRouter.validationCode(post: post), completion: completion)
-        
     }
     
     static func registerUser( post: UserRegisterPost, completion:@escaping (Result<GeneralResponse, NetworkMessage>)->Void) {
@@ -259,24 +251,17 @@ class APIClient : BaseAPIClient {
     }
     
     static func downloadFile(url: String, completion:@escaping (Result<NSURL, NetworkMessage>)->Void) {
-        
         performRequestDownload(url: url, completion: completion)
-        
-        
     }
     
     
     // MARK: - Login
     static func loginUser( post: LoginPost, completion:@escaping (Result<LoginResponse, NetworkMessage>)->Void) {
-        
         performRequest(route: APIRouter.loginUser(post: post), completion: completion)
-        
     }
     
     static func firebaseLogin(pathFB: String, completion:@escaping (Result<LoginResponse, NetworkMessage>)->Void) {
-        
         performRequestFirebase(pathFB: pathFB, completion: completion)
-        
     }
     
     static func updatePassword( post: UpdatePasswordPost, completion:@escaping (Result<GeneralResponse, NetworkMessage>)->Void) {
@@ -296,7 +281,4 @@ class APIClient : BaseAPIClient {
         performRequestFirebase(pathFB: pathFB, completion: completion)
         
     }
-    
-    
-    
 }

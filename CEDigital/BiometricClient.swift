@@ -11,8 +11,6 @@ import FirebaseFirestore
 
 class BiometricClient : BaseAPIClient {
     
-
-    
     
     private static func isGoodRequest(data: Data?) -> Bool{
         let decoder = JSONDecoder()
@@ -36,17 +34,14 @@ class BiometricClient : BaseAPIClient {
         return session.request(route)
             .validate(statusCode: 200..<300)
             .responseDecodable(of: T.self) { response in
-//            .responseJSON { (response) in
+                //            .responseJSON { (response) in
                 
                 do {
-                    
-                
                     guard let jsonData = response.data else {
                         throw NetworkMessage(httpCode:0)
                     }
                     
                     if(isGoodRequest(data: jsonData)){
-                        
                         if let bearerToken = response.response?.allHeaderFields[HTTPHeaderField.authentication.rawValue] as? String{
                             
                             AppPreferences.shared.bearerToken = bearerToken
@@ -82,11 +77,7 @@ class BiometricClient : BaseAPIClient {
                     
                 }
             }
-        
-        
     }
-    
-    
     
     private static func parseApiError(data: Data?, httpCode:Int) -> NetworkMessage {
         let decoder = JSONDecoder()
@@ -97,14 +88,10 @@ class BiometricClient : BaseAPIClient {
         return NetworkMessage(  httpCode: httpCode)
     }
     
-    
-    
     // MARK: - Fingerprint
-    
     static func validationFingerPrintIdentity( post: FingerPrintValidatePost, completion:@escaping (Result<BaseResponse<FingerPrintValidateResponse>, NetworkMessage>)->Void) {
         
         performRequest(route: BiometricRouter.validationFingerPrintIdentity(post: post), completion: completion)
-        
     }
     
     // MARK: - Facial Validation
@@ -120,9 +107,5 @@ class BiometricClient : BaseAPIClient {
         performRequest(route: BiometricRouter.validationFacialIdentity(post: post), completion: completion)
         
     }
-    
-    
-    
-    
 }
 

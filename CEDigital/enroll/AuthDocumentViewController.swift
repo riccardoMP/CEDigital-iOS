@@ -78,7 +78,6 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         viewModel.deviceInformation.bind { [weak self]  device in
             guard device != nil else { return }
             
-            
             let numeroBusqueda = self?.eteMaterialDocument.textInput.text!
             let sCodeDispositivo = AppPreferences.shared.parametryCEObject.uuid
             let tipoBusqueda = self!.typeEditText.typeDocument.rawValue
