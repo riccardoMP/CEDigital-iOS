@@ -17,21 +17,17 @@ protocol ValidateCodeFlow: AnyObject {
 class ValidateCodeCoordinator: Coordinator {
     let navigationController: UINavigationController
     let registerPost: UserRegisterPost
-    let validateBy: EnumValidateBy
     
-    init(navigationController: UINavigationController, registerPost: UserRegisterPost, validateBy: EnumValidateBy) {
+    init(navigationController: UINavigationController, registerPost: UserRegisterPost) {
         self.navigationController = navigationController
         self.registerPost = registerPost
-        self.validateBy = validateBy
     }
     
     func start() {
         
         let vc = ValidateCodeViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self
-        vc.validateBy = validateBy
         vc.registerPost = registerPost
-        
         
         navigationController.pushViewController(vc, animated: true)
     }

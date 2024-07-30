@@ -28,8 +28,6 @@ class RecoveryValidateCoordinator: Coordinator, RecoveryValidateFlow {
         
         let vc = RecoveryValidateViewController.instantiate(storyboard: StoryboardConstants.SB_PASS)
         vc.coordinator = self
-        
-        
     
         navigationController.pushViewController(vc, animated: true)
     }

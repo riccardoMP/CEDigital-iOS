@@ -10,7 +10,7 @@
 import UIKit
 
 protocol GeneratePasswordFlow: AnyObject {
-    func coordinateToValidateCode(registerPost: UserRegisterPost, validateBy: EnumValidateBy)
+    func coordinateToValidateCode(registerPost: UserRegisterPost)
     func coordinateToPopUpTermsCondition(generateViewController : GeneratePasswordViewController)
     func coordinateToAuthentication()
     func coordinateToUpdateInformation(viewController: UIViewController, delegate: UpdateInformationProtocol)
@@ -32,17 +32,12 @@ class GeneratePasswordCoordinator: Coordinator {
         vc.registerPost = registerPost
         navigationController.pushViewController(vc, animated: true)
     }
-    
-    
-    
-    
-    
 }
 
 extension GeneratePasswordCoordinator : GeneratePasswordFlow {
     
-    func coordinateToValidateCode(registerPost: UserRegisterPost, validateBy: EnumValidateBy) {
-        let validateCodeCoordinator = ValidateCodeCoordinator(navigationController: navigationController, registerPost: registerPost, validateBy: validateBy)
+    func coordinateToValidateCode(registerPost: UserRegisterPost) {
+        let validateCodeCoordinator = ValidateCodeCoordinator(navigationController: navigationController, registerPost: registerPost)
         coordinate(to: validateCodeCoordinator)
     }
     

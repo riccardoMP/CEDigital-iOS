@@ -15,8 +15,6 @@ class RecoveryInformationViewController: GenericViewController, ViewControllerPr
     
     var notificationType: String = ""
     
-    var action : EnumValidateBy?
-    
     @IBOutlet weak var lblSubTitle: UILabel!
     @IBOutlet weak var vMail: LectureView!
     @IBOutlet weak var vPhone: LectureView!
@@ -33,7 +31,6 @@ class RecoveryInformationViewController: GenericViewController, ViewControllerPr
         self.initializeUI()
         self.setup()
         self.setupViewModel()
-        
         
     }
     
@@ -97,7 +94,7 @@ class RecoveryInformationViewController: GenericViewController, ViewControllerPr
         loginViewModel.deviceInformation.bind { [weak self]  device in
             guard device != nil else { return }
             
-            self?.doGenerateCode(notificationType: self?.action?.rawValue ?? "")
+            self?.doGenerateCode()
             
         }
         
@@ -134,10 +131,7 @@ class RecoveryInformationViewController: GenericViewController, ViewControllerPr
     }
     
     
-    func doGenerateCode(notificationType: String) {
-        
-        
-        
+    func doGenerateCode() {
         let generateCode = GenerateCodePost(sCodeDispositivo: AppPreferences.init().parametryCEObject.uuid
                                             , sCodigo: ""
                                             , sCorreo: AppPreferences.init().getUser().sEmail.decrypt()
@@ -145,44 +139,20 @@ class RecoveryInformationViewController: GenericViewController, ViewControllerPr
                                             , sTipoCodigo: AppUtils.EnumTypeCodeUser.ACCESS.rawValue
                                             , uidPersona: AppPreferences.init().getUser().uIdPersona.decrypt()
                                             , sTelefono: AppPreferences.shared.getUser().sTelefono.decrypt()
-                                            , sTipoNotificacion: notificationType)
+                                            , sTipoNotificacion: EnumValidateBy.MAIL.rawValue)
         
         
         self.loginViewModel.doGenerateCode(post: generateCode)
     }
     
-    func showActionSheet(){
-        
-        /*GenerateCodeByPicker.shared.showActionSheet(vc: self)
-        
-        GenerateCodeByPicker.shared.actionBlock = { (notificationType) in
-            
-            self.doGenerateCode(notificationType: notificationType.rawValue)
-            
-            
-        }*/
-    }
     
     // MARK: - Action
     
     @IBAction func onValidateCode(_ sender: Any) {
         
+        let post = DeviceInformationPost(sCodigo: RSAKeyManager.shared.getMyPublicKeyString()!, sNumero: AppPreferences.shared.parametryCEObject.documentNumber, sTipo: AppPreferences.shared.parametryCEObject.idDocumento)
         
-        GenerateCodeByPicker.shared.showActionSheet(vc: self)
-        
-        GenerateCodeByPicker.shared.actionBlock = { (notificationType) in
-            
-            
-            self.action = notificationType
-        
-            let post = DeviceInformationPost(sCodigo: RSAKeyManager.shared.getMyPublicKeyString()!, sNumero: AppPreferences.shared.parametryCEObject.documentNumber, sTipo: AppPreferences.shared.parametryCEObject.idDocumento)
-            
-            self.loginViewModel.doDeviceInformation(post: post)
-            
-        }
-        
-        
-        
+        self.loginViewModel.doDeviceInformation(post: post)
     }
     
 }

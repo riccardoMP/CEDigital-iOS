@@ -11,6 +11,4 @@ public enum EnumValidateBy : String, Codable {
     case SMS              = "T"
     case MAIL             = "C"
     case TEST             = "P"
-    
-    
 }

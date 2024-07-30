@@ -212,18 +212,6 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
     }
     
     
-    func showActionSheet(){
-        GenerateCodeByPicker.shared.showActionSheet(vc: self)
-        
-        GenerateCodeByPicker.shared.actionBlock = { (notificationType) in
-            
-            self.doGenerateCode(notificationType: notificationType.rawValue)
-            
-            
-        }
-        
-    }
-    
     // MARK: - Delegates
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -281,7 +269,7 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
     }
     
     @IBAction func onSendAgain(_ sender: Any) {
-        self.showActionSheet()
+        doGenerateCode()
     }
     
     
@@ -351,9 +339,7 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
         }
     }
     
-    func doGenerateCode(notificationType: String) {
-        
-        
+    func doGenerateCode() {
         LoadingIndicatorView.show("gp_loading".localized)
         
         
@@ -364,7 +350,7 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
                                             , sTipoCodigo: AppUtils.EnumTypeCodeUser.ACCESS.rawValue
                                             , uidPersona: AppPreferences.init().getUser().uIdPersona.decrypt()
                                             , sTelefono: AppPreferences.shared.getUser().sTelefono.decrypt()
-                                            , sTipoNotificacion: notificationType)
+                                            , sTipoNotificacion: EnumValidateBy.MAIL.rawValue)
         
         
         APIClient.generateCode(post: generateCode) { result in

@@ -12,7 +12,6 @@ import UIKit
 
 protocol RecoveryInformationFlow: AnyObject {
     func coordinateToValidate()
-    
 }
 
 class RecoveryInformationCoordinator: Coordinator, RecoveryInformationFlow {
@@ -30,7 +29,6 @@ class RecoveryInformationCoordinator: Coordinator, RecoveryInformationFlow {
         vc.coordinator = self
         
         
-        
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -41,6 +39,4 @@ class RecoveryInformationCoordinator: Coordinator, RecoveryInformationFlow {
         let recoveryCoordinator = RecoveryValidateCoordinator(navigationController: self.navigationController)
         coordinate(to: recoveryCoordinator)
     }
-    
-    
 }

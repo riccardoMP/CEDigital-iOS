@@ -6,8 +6,6 @@
 //  Copyright © 2020 Riccardo Mija Padilla. All rights reserved.
 //
 
-
-
 import UIKit
 
 class ValidateCodeViewController: GenericViewController, ViewControllerProtocol , UITextFieldDelegate {
@@ -15,7 +13,6 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
     private let viewModel = EnrollViewModel()
     var coordinator: ValidateCodeCoordinator?
     var countAttemps = 1
-    var validateBy : EnumValidateBy?
     
     
     @IBOutlet weak var lblDigits: UILabel!
@@ -33,6 +30,7 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
             
         }
     }
+    
     @IBOutlet weak var txtCode2: UITextField!{
         didSet{
             txtCode2.delegate = self
@@ -87,7 +85,6 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
         self.initializeUI()
         self.setup()
         self.setupViewModel()
-        
     }
     
     
@@ -112,6 +109,7 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
         self.delegate = self
         
         lblDigits = LabelFluentBuilder.init(label: lblDigits)
+            .setText("verification_digits_mail".localized)
             .setTextColor(UIParameters.COLOR_PRIMARY)
             .setTextSize(13, UIParameters.TTF_REGULAR)
             .build()
@@ -133,21 +131,9 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
             .setText("vc_send_again".localized)
             .build()
         
-        
-        
-        
     }
     
     func setup() {
-        
-        switch validateBy {
-        case .MAIL:
-            lblDigits.text = "verification_digits_mail".localized
-        case .SMS, .TEST:
-            lblDigits.text = "verification_digits_sms".localized
-        case .none:
-            break
-        }
         
     }
     
@@ -184,17 +170,12 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
             self.countAttemps += 1
             self.clearCodes()
             self.showMsgAlert(title: "general_oops".localized, message: error!.body, dismissAnimated: true)
-            
-            
         }
         
         viewModel.onMessageError.bind {  error in
             guard error != nil else { return }
             
-            
             self.showMsgAlert(title: "general_oops".localized, message: error!.body, dismissAnimated: true)
-            
-            
         }
         
         viewModel.isViewLoading.bind { isViewLoading in
@@ -250,21 +231,6 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
         
     }
     
-    
-    func showActionSheet(){
-        
-        GenerateCodeByPicker.shared.showActionSheet(vc: self)
-        
-        GenerateCodeByPicker.shared.actionBlock = { (notificationType) in
-            
-            self.doGenerateCode(notificationType: notificationType.rawValue)
-            
-            
-        }
-        
-        
-    }
-    
     // MARK: - Action
     
     @IBAction func onValidateCode(_ sender: Any) {
@@ -293,7 +259,7 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
     }
     
     @IBAction func onSendAgain(_ sender: Any) {
-        showActionSheet()
+        self.doGenerateCode()
     }
     
     
@@ -318,13 +284,11 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
         
         
         return newLength <= 1
-        
     }
     
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Try to find next responder
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
@@ -383,8 +347,7 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
         }
     }
     
-    func doGenerateCode(notificationType: String) {
-        
+    func doGenerateCode() {
         
         LoadingIndicatorView.show("gp_loading".localized)
         
@@ -396,7 +359,7 @@ class ValidateCodeViewController: GenericViewController, ViewControllerProtocol 
                                             , sTipoCodigo: AppUtils.EnumTypeCodeUser.VERIFICATION.rawValue
                                             , uidPersona: registerPost!.uidPersona.decrypt()
                                             , sTelefono: AppPreferences.shared.getUser().sTelefono.decrypt()
-                                            , sTipoNotificacion: notificationType)
+                                            , sTipoNotificacion: EnumValidateBy.MAIL.rawValue)
         
         
         APIClient.generateCode(post: generateCode) { result in
@@ -428,5 +391,4 @@ extension ValidateCodeViewController : LogoutProtocol{
     func onLogout() {
         coordinator?.coordinateToAuthentication()
     }
-    
 }

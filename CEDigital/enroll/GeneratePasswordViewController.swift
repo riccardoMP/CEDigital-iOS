@@ -33,7 +33,6 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -92,10 +91,9 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
             vPhone.initializeUI(title: "general_phone".localized, description: user.sTelefono.maskingText(expression: Constants.REGEX_MASKING_PHONE))
             vMail.initializeUI(title:"general_email".localized , description: user.sEmail.maskingText(expression: Constants.REGEX_MASKING_EMAIL))
         }else{
-            vPhone.initializeUI(title: "general_phone".localized, description: user.sTelefono.decrypt().maskingText(expression: Constants.REGEX_MASKING_PHONE), image: "ic_edit")
-            vMail.initializeUI(title:"general_email".localized , description: user.sEmail.decrypt().maskingText(expression: Constants.REGEX_MASKING_EMAIL), image: "ic_edit")
+            vPhone.initializeUI(title: "general_phone".localized, description: user.sTelefono.decrypt().maskingText(expression: Constants.REGEX_MASKING_PHONE))
+            vMail.initializeUI(title:"general_email".localized , description: user.sEmail.decrypt().maskingText(expression: Constants.REGEX_MASKING_EMAIL))
         }
-        
         
         
         lblTermsCondition = LabelFluentBuilder.init(label: lblTermsCondition)
@@ -110,26 +108,19 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
             .setText("gp_generate_password".localized)
             .build()
         
-        
-        
     }
     
     func setup() {
         self.setupActiveLabel()
         
-        
-        
         etePassword.setupForPassword(typeEditText)
         
         typeEditText.hint = "gp_hint_repeat".localized
         eteRepeatPassword.setupForPassword(typeEditText)
-        
-        
     }
     
     
     func setupViewModel(){
-        
         viewModel.codeGenerated.bind {  validateBy in
             guard validateBy != nil else { return }
             
@@ -138,10 +129,7 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
                 .build()
             
             
-            self.coordinator?.coordinateToValidateCode(registerPost: self.registerPost!, validateBy: EnumValidateBy.init(rawValue: validateBy!) ?? EnumValidateBy.TEST)
-            
-            
-            
+            self.coordinator?.coordinateToValidateCode(registerPost: self.registerPost!)
         }
         
         //2. Observer when the WS response the person information
@@ -161,16 +149,12 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
             self.vPhone.setDescription(value: userCE!.sTelefono.decrypt().maskingText(expression: Constants.REGEX_MASKING_PHONE))
             self.vMail.setDescription(value: userCE!.sEmail.decrypt().maskingText(expression: Constants.REGEX_MASKING_EMAIL))
             
-   
-            
         }
         
         viewModel.onMessageError.bind {  error in
             guard error != nil else { return }
             
-            
             self.showMsgAlert(title: "general_oops".localized, message: error!.body, dismissAnimated: true)
-            
             
         }
         
@@ -255,31 +239,15 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
     }
     
     
-    func showActionSheet(){
-        
-        
-        GenerateCodeByPicker.shared.showActionSheet(vc: self)
-        
-        GenerateCodeByPicker.shared.actionBlock = { (notificationType) in
-            
-            self.doGenerateCode(notificationType: notificationType.rawValue)
-            
-            
-        }
-        
-
-    }
-    
     // MARK: - Action
     
     @IBAction func onValidatePassword(_ sender: Any) {
         
         if(isValid()){
-            
             if(AppPreferences.shared.parametryCEObject.isAppleUser){
                 self.viewModel.doFirebaseGenerateCode()
             }else{
-                self.showActionSheet()
+                self.doGenerateCode()
             }
             
         }
@@ -288,14 +256,12 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
     // MARK: - Notification
     
     @objc func doActionEditInformation(_ notification:Notification){
-        
         coordinator?.coordinateToUpdateInformation(viewController: self, delegate: self)
     }
     
     // MARK: - WebService
     
-    func doGenerateCode(notificationType: String) {
-        
+    func doGenerateCode() {
 
         let generateCode = GenerateCodePost(sCodeDispositivo: registerPost!.sCodeDispositivo
                                             , sCodigo: ""
@@ -304,13 +270,11 @@ class GeneratePasswordViewController: GenericViewController, ViewControllerProto
                                             , sTipoCodigo: AppUtils.EnumTypeCodeUser.VERIFICATION.rawValue
                                             , uidPersona: registerPost!.uidPersona.decrypt()
                                             , sTelefono: AppPreferences.shared.getUser().sTelefono.decrypt()
-                                            , sTipoNotificacion: notificationType)
+                                            , sTipoNotificacion: EnumValidateBy.MAIL.rawValue)
         
         
         viewModel.doGenerateCode(post: generateCode)
-        
     }
-    
     
 }
 
@@ -318,14 +282,11 @@ extension GeneratePasswordViewController : LogoutProtocol{
     func onLogout() {
         coordinator?.coordinateToAuthentication()
     }
-    
-    
 }
 
 extension GeneratePasswordViewController : UpdateInformationProtocol{
     func onUpdateSuccess() {
         let post = UserValidationPost(numeroBusqueda: AppPreferences.shared.parametryCEObject.documentNumber, sCodeDispositivo: AppPreferences.shared.parametryCEObject.uuid, tipoBusqueda: AppPreferences.shared.parametryCEObject.typeEditTextStored.typeDocument.rawValue, tipoDocumento: AppPreferences.shared.parametryCEObject.idDocumento)
-        
         
         
         self.viewModel.doValidationUser(post: post)

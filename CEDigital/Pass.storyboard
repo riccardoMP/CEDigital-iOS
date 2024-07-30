@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,46 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_migraciones" translatesAutoresizingMaskIntoConstraints="NO" id="SQw-pR-dqX">
-                                <rect key="frame" x="0.0" y="70.5" width="414" height="227.5"/>
+                                <rect key="frame" x="0.0" y="74.5" width="414" height="227.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SQw-pR-dqX" secondAttribute="height" multiplier="1:0.55" id="QQU-yZ-hBb"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q88-wB-iZP" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-TY-BWZ" customClass="CEFloatingPlaceholderTextField" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="18.5" y="346.5" width="377" height="122.5"/>
+                                <rect key="frame" x="18.5" y="348.5" width="377" height="122"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="setPlaceholder" value="Test"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-N2-SzN" customClass="CEFloatingPlaceholderTextField" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="18.5" y="469" width="377" height="123"/>
+                                <rect key="frame" x="18.5" y="470.5" width="377" height="122"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="setPlaceholder" value="Test"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-Gt-kup">
-                                <rect key="frame" x="18.5" y="649.5" width="377" height="57.5"/>
+                                <rect key="frame" x="18.5" y="650.5" width="377" height="57"/>
                                 <connections>
                                     <action selector="onLogin:" destination="1dy-eZ-Ftq" eventType="touchUpInside" id="gbA-QD-jSc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihN-Y4-aO9">
-                                <rect key="frame" x="18.5" y="715" width="377" height="57"/>
+                                <rect key="frame" x="18.5" y="715.5" width="377" height="57"/>
                                 <connections>
                                     <action selector="onRecoveryPassword:" destination="1dy-eZ-Ftq" eventType="touchUpInside" id="3sV-rM-4Ir"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEX-JG-hIv">
-                                <rect key="frame" x="18.5" y="780" width="377" height="57.5"/>
+                                <rect key="frame" x="18.5" y="780.5" width="377" height="57"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-J6-Igg">
-                                        <rect key="frame" x="75.5" y="7.5" width="226" height="43"/>
+                                        <rect key="frame" x="75.5" y="7" width="226" height="43"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="onEnrollAgain:" destination="1dy-eZ-Ftq" eventType="touchUpInside" id="E0G-Hn-Ssg"/>
@@ -137,10 +137,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kO9-uw-GEh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z4-hL-mS2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="849"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGN-lI-GaG" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="18.5"/>
@@ -165,37 +165,37 @@
                                                 </variation>
                                             </containerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-QK-EeO">
-                                                <rect key="frame" x="18.5" y="262.5" width="377" height="61.5"/>
+                                                <rect key="frame" x="18.5" y="262.5" width="377" height="61"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="onChangeState:" destination="oJY-cE-3N3" eventType="touchUpInside" id="XR7-9T-8iJ"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVL-L9-2xc" customClass="DisclaimerView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="18.5" y="332" width="377" height="68"/>
+                                                <rect key="frame" x="18.5" y="331.5" width="377" height="68"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-EB-GqF" customClass="TextImageHView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="18.5" y="408" width="377" height="51"/>
+                                                <rect key="frame" x="18.5" y="407.5" width="377" height="51"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iMe-aD-VTN">
-                                                <rect key="frame" x="18.5" y="459" width="377" height="327.5"/>
+                                                <rect key="frame" x="18.5" y="458.5" width="377" height="325.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWR-Lu-quJ" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="76"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="75.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Qv-Oj-QrR" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="84" width="377" height="76"/>
+                                                        <rect key="frame" x="0.0" y="83.5" width="377" height="75"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gie-vb-Kvq" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="168" width="377" height="75.5"/>
+                                                        <rect key="frame" x="0.0" y="166.5" width="377" height="75.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rL-lj-S6k" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="251.5" width="377" height="76"/>
+                                                        <rect key="frame" x="0.0" y="250" width="377" height="75.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
@@ -205,7 +205,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk0-fa-oFP">
-                                                <rect key="frame" x="18.5" y="786.5" width="377" height="65.5"/>
+                                                <rect key="frame" x="18.5" y="784" width="377" height="65"/>
                                                 <connections>
                                                     <action selector="onGoToWeb:" destination="oJY-cE-3N3" eventType="touchUpInside" id="4kM-kH-qL5"/>
                                                 </connections>
@@ -257,14 +257,14 @@
                                         <variation key="heightClass=compact">
                                             <mask key="constraints">
                                                 <include reference="Gm5-Xf-GIT"/>
-                                                <exclude reference="Oww-Zo-Nom"/>
                                                 <exclude reference="VXM-U5-EVr"/>
+                                                <exclude reference="Oww-Zo-Nom"/>
                                                 <include reference="uDC-tY-RRY"/>
                                                 <exclude reference="4Kq-wX-xgK"/>
-                                                <exclude reference="8HR-ta-10x"/>
-                                                <exclude reference="ELe-1W-DWV"/>
                                                 <include reference="HQ5-7Z-Omb"/>
+                                                <exclude reference="ELe-1W-DWV"/>
                                                 <include reference="f59-GZ-Bm6"/>
+                                                <exclude reference="8HR-ta-10x"/>
                                                 <include reference="zLc-6R-56i"/>
                                             </mask>
                                         </variation>
@@ -345,82 +345,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-ui-MK9" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy0-Hd-KbG">
-                                <rect key="frame" x="0.0" y="62.5" width="414" height="799.5"/>
+                                <rect key="frame" x="0.0" y="66.5" width="414" height="795.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7T-1J-VKO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="989.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="984.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6rH-2y-0uM">
-                                                <rect key="frame" x="20.5" y="0.0" width="373" height="981.5"/>
+                                                <rect key="frame" x="20.5" y="0.0" width="373" height="976.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q76-5X-mXO" customClass="TextImageHView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="62"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVG-Pa-Tiw" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70.5" width="373" height="63"/>
+                                                        <rect key="frame" x="0.0" y="70" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-45-hBU" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="141.5" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="140.5" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-jl-ibN">
-                                                        <rect key="frame" x="0.0" y="212" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="211" width="373" height="62"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7S5-BU-Ykd" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="62.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="62"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SG2-1R-OfD" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                                <rect key="frame" x="190.5" y="0.0" width="182.5" height="62.5"/>
+                                                                <rect key="frame" x="190.5" y="0.0" width="182.5" height="62"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-96-1Dn" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="282.5" width="373" height="63"/>
+                                                        <rect key="frame" x="0.0" y="281" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywp-sA-Dpl" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="353.5" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="351.5" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-no-ba8" customClass="TextImageHView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="424" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="422" width="373" height="62"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yri-5k-yVI">
-                                                        <rect key="frame" x="0.0" y="494.5" width="373" height="63"/>
+                                                        <rect key="frame" x="0.0" y="492" width="373" height="62.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-Gd-Mpf" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="62.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-2y-BGj" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                                <rect key="frame" x="190.5" y="0.0" width="182.5" height="63"/>
+                                                                <rect key="frame" x="190.5" y="0.0" width="182.5" height="62.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G09-au-uCZ" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="565.5" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="562.5" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92B-5P-WBp" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="636" width="373" height="63"/>
+                                                        <rect key="frame" x="0.0" y="633" width="373" height="62"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KI1-vw-bmf" customClass="TextImageHView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="707" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="703" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ptE-qE-TkJ">
-                                                        <rect key="frame" x="0.0" y="777.5" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="773.5" width="373" height="62.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqg-eW-Yov" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="182.5" height="62.5"/>
@@ -433,11 +433,11 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIs-yd-peP" customClass="TextImageHView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="848" width="373" height="63"/>
+                                                        <rect key="frame" x="0.0" y="844" width="373" height="62.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nE-xO-Hik" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="919" width="373" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="914.5" width="373" height="62"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
@@ -479,22 +479,22 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="FRm-a7-OLp"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="3fT-uS-bGT"/>
                                         <exclude reference="Om2-KY-k4e"/>
-                                        <exclude reference="Pas-AA-rJs"/>
                                         <exclude reference="c8J-xO-6kP"/>
+                                        <exclude reference="Pas-AA-rJs"/>
+                                        <exclude reference="3fT-uS-bGT"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="3fT-uS-bGT"/>
-                                        <exclude reference="8rj-6d-7yS"/>
                                         <include reference="Om2-KY-k4e"/>
-                                        <include reference="Pas-AA-rJs"/>
                                         <exclude reference="SCd-Ft-Yif"/>
                                         <include reference="c8J-xO-6kP"/>
                                         <exclude reference="tU6-Wc-1Id"/>
+                                        <include reference="Pas-AA-rJs"/>
                                         <exclude reference="zGE-x7-EYQ"/>
+                                        <include reference="3fT-uS-bGT"/>
+                                        <exclude reference="8rj-6d-7yS"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -573,14 +573,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-Y0-uqp" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-he-SQD">
-                                <rect key="frame" x="0.0" y="62.5" width="414" height="799.5"/>
+                                <rect key="frame" x="0.0" y="66.5" width="414" height="795.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qmj-MS-WBH">
-                                        <rect key="frame" x="52" y="164.5" width="310.5" height="310.5"/>
+                                        <rect key="frame" x="52" y="163" width="310.5" height="310.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qmj-MS-WBH" secondAttribute="height" multiplier="1:1" id="MUv-Gg-NCq"/>
                                         </constraints>
@@ -591,7 +591,7 @@
                                         </variation>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kj-zX-9Ut">
-                                        <rect key="frame" x="0.0" y="710.5" width="414" height="1"/>
+                                        <rect key="frame" x="0.0" y="707" width="414" height="1"/>
                                         <color key="backgroundColor" name="colorSeparator"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="rKZ-1A-IP4">
@@ -606,7 +606,7 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-Bp-qHn">
-                                        <rect key="frame" x="20.5" y="711.5" width="373" height="88"/>
+                                        <rect key="frame" x="20.5" y="708" width="373" height="87.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -640,42 +640,42 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="lD4-U0-XGW"/>
-                                        <exclude reference="maM-MO-Z0i"/>
-                                        <exclude reference="mlt-sh-TPV"/>
                                         <exclude reference="sd1-ye-Zsa"/>
-                                        <exclude reference="7bP-2w-SMQ"/>
+                                        <exclude reference="lD4-U0-XGW"/>
+                                        <exclude reference="mlt-sh-TPV"/>
+                                        <exclude reference="maM-MO-Z0i"/>
                                         <exclude reference="LMj-A5-x7g"/>
                                         <exclude reference="QaT-gD-gfp"/>
-                                        <exclude reference="528-5T-I4L"/>
+                                        <exclude reference="7bP-2w-SMQ"/>
                                         <exclude reference="iTp-BX-gMC"/>
-                                        <exclude reference="weP-gE-dE1"/>
+                                        <exclude reference="528-5T-I4L"/>
                                         <exclude reference="z2J-kw-B0F"/>
+                                        <exclude reference="weP-gE-dE1"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="BAF-UV-DUu"/>
                                         <exclude reference="K3S-Zk-stO"/>
-                                        <include reference="lD4-U0-XGW"/>
-                                        <include reference="maM-MO-Z0i"/>
-                                        <include reference="mlt-sh-TPV"/>
-                                        <exclude reference="ro1-bO-OPS"/>
                                         <include reference="sd1-ye-Zsa"/>
+                                        <exclude reference="BAF-UV-DUu"/>
+                                        <include reference="lD4-U0-XGW"/>
+                                        <exclude reference="ro1-bO-OPS"/>
+                                        <include reference="mlt-sh-TPV"/>
+                                        <include reference="maM-MO-Z0i"/>
                                         <exclude reference="4WK-ye-qn3"/>
-                                        <exclude reference="70E-BX-Kev"/>
-                                        <include reference="7bP-2w-SMQ"/>
                                         <include reference="LMj-A5-x7g"/>
+                                        <exclude reference="70E-BX-Kev"/>
                                         <include reference="QaT-gD-gfp"/>
-                                        <include reference="528-5T-I4L"/>
-                                        <exclude reference="CZG-aX-FvF"/>
-                                        <exclude reference="I4w-gp-6ga"/>
-                                        <exclude reference="Mbu-yB-3kd"/>
-                                        <exclude reference="NZz-QV-7pD"/>
+                                        <include reference="7bP-2w-SMQ"/>
                                         <exclude reference="Oyz-7q-dnb"/>
                                         <include reference="iTp-BX-gMC"/>
-                                        <include reference="weP-gE-dE1"/>
+                                        <include reference="528-5T-I4L"/>
+                                        <exclude reference="I4w-gp-6ga"/>
+                                        <exclude reference="Mbu-yB-3kd"/>
+                                        <exclude reference="CZG-aX-FvF"/>
                                         <include reference="z2J-kw-B0F"/>
+                                        <include reference="weP-gE-dE1"/>
+                                        <exclude reference="NZz-QV-7pD"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -702,16 +702,16 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="0k0-bn-imI"/>
                                 <exclude reference="kTG-Qs-Lw3"/>
+                                <exclude reference="0k0-bn-imI"/>
                                 <exclude reference="rtT-Zi-J6O"/>
                                 <exclude reference="YG4-fW-0oY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="0k0-bn-imI"/>
                                 <include reference="kTG-Qs-Lw3"/>
+                                <include reference="0k0-bn-imI"/>
                                 <include reference="rtT-Zi-J6O"/>
                                 <exclude reference="YG4-fW-0oY"/>
                             </mask>
@@ -735,11 +735,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzi-x2-I04" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NG5-Bb-6Q9">
-                                <rect key="frame" x="0.0" y="62.5" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="66.5" width="414" height="688.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b23-2d-8NX">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
@@ -749,32 +749,32 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="8xO-bJ-KaJ">
-                                        <rect key="frame" x="165.5" y="57" width="83" height="83"/>
+                                        <rect key="frame" x="165.5" y="57" width="83" height="82.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8xO-bJ-KaJ" secondAttribute="height" multiplier="1:1" id="2Af-Xq-ifj"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="js5-Yh-vx2">
-                                        <rect key="frame" x="20.5" y="148" width="373" height="145.5"/>
+                                        <rect key="frame" x="20.5" y="147.5" width="373" height="145"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJq-wc-w3m" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="68.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-J2-SPR" customClass="LectureView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="76.5" width="373" height="69"/>
+                                                <rect key="frame" x="0.0" y="76.5" width="373" height="68.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN2-ip-3XM">
-                                        <rect key="frame" x="0.0" y="360" width="414" height="76"/>
+                                        <rect key="frame" x="0.0" y="358" width="414" height="76"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-gL-KE6">
-                                        <rect key="frame" x="20.5" y="488" width="373" height="62"/>
+                                        <rect key="frame" x="20.5" y="485.5" width="373" height="62"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="onValidateCode:" destination="wqS-FC-ewc" eventType="touchUpInside" id="lwa-WL-KsD"/>
@@ -804,14 +804,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvW-vm-rWd">
-                                <rect key="frame" x="0.0" y="754.5" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="755" width="414" height="1"/>
                                 <color key="backgroundColor" name="colorSeparator"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hUO-OQ-ZHD"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHQ-qy-cfC">
-                                <rect key="frame" x="20.5" y="755.5" width="373" height="82"/>
+                                <rect key="frame" x="20.5" y="756" width="373" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -868,11 +868,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrw-0F-gol" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR2-Yh-0vl">
-                                <rect key="frame" x="0.0" y="62.5" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="66.5" width="414" height="688.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqS-Yw-Yc7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
@@ -882,68 +882,68 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="oE8-3L-d71">
-                                        <rect key="frame" x="165.5" y="57" width="83" height="83"/>
+                                        <rect key="frame" x="165.5" y="57" width="83" height="82.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oE8-3L-d71" secondAttribute="height" multiplier="1:1" id="4wo-C6-PEX"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qfn-P1-Vm0">
-                                        <rect key="frame" x="20.5" y="195.5" width="373" height="59"/>
+                                        <rect key="frame" x="20.5" y="194.5" width="373" height="58.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HzV-uF-lip">
-                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG7-CW-FWG">
-                                                <rect key="frame" x="63.5" y="0.0" width="57" height="59"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="57" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5H-Rj-9qh">
-                                                <rect key="frame" x="126.5" y="0.0" width="57" height="59"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="57" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBd-SG-IUQ">
-                                                <rect key="frame" x="189.5" y="0.0" width="57" height="59"/>
+                                                <rect key="frame" x="189.5" y="0.0" width="57" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CX-c9-zvo">
-                                                <rect key="frame" x="252.5" y="0.0" width="57" height="59"/>
+                                                <rect key="frame" x="252.5" y="0.0" width="57" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxa-wU-vzI">
-                                                <rect key="frame" x="315.5" y="0.0" width="57.5" height="59"/>
+                                                <rect key="frame" x="315.5" y="0.0" width="57.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-Vd-zvH" customClass="CEFloatingPlaceholderTextField" customModule="CEDigital" customModuleProvider="target">
-                                        <rect key="frame" x="20.5" y="262.5" width="373" height="103.5"/>
+                                        <rect key="frame" x="20.5" y="261" width="373" height="103.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="setPlaceholder" value="Test"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-zD-vWd" customClass="CEFloatingPlaceholderTextField" customModule="CEDigital" customModuleProvider="target">
-                                        <rect key="frame" x="20.5" y="366" width="373" height="104"/>
+                                        <rect key="frame" x="20.5" y="364.5" width="373" height="103"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="setPlaceholder" value="Test"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-Q1-wbg">
-                                        <rect key="frame" x="20.5" y="573.5" width="373" height="55.5"/>
+                                        <rect key="frame" x="20.5" y="570.5" width="373" height="55"/>
                                         <connections>
                                             <action selector="onValidateCode:" destination="YsX-KD-d2H" eventType="touchUpInside" id="Fcb-dX-gX2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Ca-oxP">
-                                        <rect key="frame" x="18.5" y="637" width="377" height="55"/>
+                                        <rect key="frame" x="18.5" y="633.5" width="377" height="55"/>
                                         <connections>
                                             <action selector="onSendAgain:" destination="YsX-KD-d2H" eventType="touchUpInside" id="sgh-IS-YeV"/>
                                         </connections>
@@ -980,14 +980,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Skg-Sm-wrK">
-                                <rect key="frame" x="0.0" y="754.5" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="755" width="414" height="1"/>
                                 <color key="backgroundColor" name="colorSeparator"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="lBO-H7-04a"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2W-Bb-h6d">
-                                <rect key="frame" x="20.5" y="755.5" width="373" height="82"/>
+                                <rect key="frame" x="20.5" y="756" width="373" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1050,24 +1050,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtl-rI-vwx" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_success" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-oT-pfp">
-                                <rect key="frame" x="155.5" y="288" width="103.5" height="103.5"/>
+                                <rect key="frame" x="155.5" y="289.5" width="103.5" height="103.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Nqa-oT-pfp" secondAttribute="height" multiplier="1:1" id="U3z-La-DJJ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-6V-Fv2">
-                                <rect key="frame" x="20.5" y="673.5" width="373" height="57.5"/>
+                                <rect key="frame" x="20.5" y="677" width="373" height="56.5"/>
                                 <state key="normal" title="1"/>
                                 <connections>
                                     <action selector="onSegueLogin:" destination="1k4-bo-yUM" eventType="touchUpInside" id="mQC-my-nCe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has solicitado tus vacaciones. Recibirás una notificación a tu correo corporativo al momento de la aprobación." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RH8-o8-N1e">
-                                <rect key="frame" x="20.5" y="391.5" width="373" height="122.5"/>
+                                <rect key="frame" x="20.5" y="393" width="373" height="122"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1111,11 +1111,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gx9-Pb-w76" customClass="CEBarView" customModule="CEDigital" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="18.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICv-hA-bg2">
-                                <rect key="frame" x="20.5" y="94.5" width="373" height="490.5"/>
+                                <rect key="frame" x="20.5" y="97" width="373" height="488.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-qT-UHN">
                                         <rect key="frame" x="8" y="0.0" width="357" height="41"/>
@@ -1130,18 +1130,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eyy-5s-6bw">
-                                        <rect key="frame" x="0.0" y="104" width="373" height="221"/>
+                                        <rect key="frame" x="0.0" y="104" width="373" height="219.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5l-iy-xnw" customClass="TitleActionView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="68.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="68"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNo-eW-u5H" customClass="TitleActionView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="76.5" width="373" height="68"/>
+                                                <rect key="frame" x="0.0" y="76" width="373" height="67.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-VQ-16p" customClass="TitleActionView" customModule="CEDigital" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="152.5" width="373" height="68.5"/>
+                                                <rect key="frame" x="0.0" y="151.5" width="373" height="68"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
