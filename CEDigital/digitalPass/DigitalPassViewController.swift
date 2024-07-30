@@ -20,14 +20,8 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var butSeeReverse: UIButton!
     @IBOutlet weak var vDisclaimer: DisclaimerView!
-    @IBOutlet weak var tviAdditionalInformation: TextImageHView!
     
-    
-    @IBOutlet weak var vExpireDate: LectureView!
-    @IBOutlet weak var vProcedureNumber: LectureView!
-    @IBOutlet weak var vProcedure: LectureView!
-    @IBOutlet weak var vStatus: LectureView!
-    @IBOutlet weak var butGoToWeb: UIButton!
+
     
     
     // MARK: - CE ContentView
@@ -94,9 +88,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
         
         self.titleNavigationBar(title: AppPreferences.shared.parametryCEObject.nameDocument)
         
-        tviAdditionalInformation.initializeUI(title: "dp_additional_information".localized, image: "ic_person")
-        
-        
         self.changeContentView()
         
         butSeeReverse = ButtonFluentBuilder.init(button: butSeeReverse)
@@ -104,18 +95,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
             .setTextColor(UIParameters.COLOR_WHITE)
             .setText("dp_see_reverse".localized)
             .build()
-        
-        vExpireDate.initializeUI(title: "dp_residence_expiration".localized, description: userLogin!.dFechaVenc)
-        vProcedureNumber.initializeUI(title: "dp_procedure_number".localized, description: userLogin?.sNumeroTramite ?? "")
-        vProcedure.initializeUI(title: "dp_procedure".localized, description: userLogin?.sTipoTramite ?? "")
-        vStatus.initializeUI(title: "dp_document_status".localized, description: userLogin!.sEstadoTramite)
-        
-        butGoToWeb = ButtonFluentBuilder.init(button: butGoToWeb)
-            .setBackground(UIParameters.COLOR_WHITE)
-            .setTextColor(UIParameters.COLOR_PRIMARY)
-            .setText("dp_go_online_query".localized)
-            .build()
-        
         
         
     }
@@ -168,7 +147,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
             switch self.behaviorButton {
             case .STATE_FORWARD:
                 
-                
                 remove(asChildViewController: ceBehindViewController)
                 add(asChildViewController: ceForwardViewController)
                 
@@ -186,7 +164,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
                 remove(asChildViewController: ptpBehindViewController)
                 add(asChildViewController: ptpForwardViewController)
             case .STATE_BEHIND:
-                
                 
                 remove(asChildViewController: ptpForwardViewController)
                 add(asChildViewController: ptpBehindViewController)
@@ -222,8 +199,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
             butSeeReverse = ButtonFluentBuilder.init(button: butSeeReverse)
                 .setText("dp_see_reverse".localized)
                 .build()
-            
-            
         }
         
         self.changeContentView()
@@ -233,7 +208,6 @@ class DigitalPassViewController: GenericViewController, ViewControllerProtocol {
     @IBAction func onGoToWeb(_ sender: Any) {
         AppUtils.openURL(url: self.userLogin!.sURL)
     }
-    
     
 }
 

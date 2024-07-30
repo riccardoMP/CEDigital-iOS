@@ -192,8 +192,8 @@
 /*Digital Pass*/
 
 "dp_title"                          =        "CARNÉ DE EXTRANJERIA DIGITAL";
-"dp_see_reverse"                    =        "VER REVERSO";
-"dp_see_behind"                     =        "VER ANVERSO";
+"dp_see_reverse"                    =        "Ver Reverso";
+"dp_see_behind"                     =        "Ver Anverso";
 "dp_additional_information"         =        "INFORMACIÓN ADICIONAL";
 "dp_general_data"                   =        "DATOS GENERALES";
 "dp_residence_expiration"           =        "Vencimiento de Residencia";

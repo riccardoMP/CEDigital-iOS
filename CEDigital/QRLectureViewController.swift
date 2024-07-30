@@ -11,7 +11,6 @@ import UIKit
 
 class QRLectureViewController: GenericViewController, ViewControllerProtocol {
     
-    
     var coordinator: QRLectureFlow?
     var userLogin: UserLogin?
     
@@ -25,17 +24,13 @@ class QRLectureViewController: GenericViewController, ViewControllerProtocol {
         self.initializeUI()
         self.setup()
         
-        
-        
     }
     
     func initializeUI() {
-    
-        
         self.titleNavigationBar(title: "qr_title".localized)
         
-        //let qrString = "\(userLogin!.sURLQR)\(userLogin!.sEncriptado)"
-        let qrString = "https://172.27.130.155/visor-qr/consulta/\(userLogin!.sEncriptado)"
+        let qrString = "\(userLogin!.sURLQR)\(userLogin!.sEncriptado)"
+        
         self.iviQR.image = AppUtils.generateQRCode(from: qrString)
         
         lblDisclaimer = LabelFluentBuilder.init(label: lblDisclaimer)

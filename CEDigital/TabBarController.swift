@@ -55,7 +55,6 @@ class TabBarController: UITabBarController  {
             
         }
         
-        
         viewModel.isViewLoading.bind { isViewLoading in
             guard isViewLoading != nil else { return }
             
@@ -93,7 +92,6 @@ extension TabBarController: SessionProtocol {
     }
     
     func onSessionLogout() {
-        
         coordinator?.coordinateToLogin()
     }
 }
