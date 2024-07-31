@@ -286,7 +286,7 @@ extension GeneratePasswordViewController : LogoutProtocol{
 
 extension GeneratePasswordViewController : UpdateInformationProtocol{
     func onUpdateSuccess() {
-        let post = UserValidationPost(numeroBusqueda: AppPreferences.shared.parametryCEObject.documentNumber, sCodeDispositivo: AppPreferences.shared.parametryCEObject.uuid, tipoBusqueda: AppPreferences.shared.parametryCEObject.typeEditTextStored.typeDocument.rawValue, tipoDocumento: AppPreferences.shared.parametryCEObject.idDocumento)
+        let post = UserValidationPost(numeroBusqueda: AppPreferences.shared.parametryCEObject.documentNumber, sCodeDispositivo: AppPreferences.shared.parametryCEObject.uuid, tipoBusqueda: EnumTypeEditText.DOCUMENT.rawValue, tipoDocumento: AppPreferences.shared.parametryCEObject.idDocumento)
         
         
         self.viewModel.doValidationUser(post: post)

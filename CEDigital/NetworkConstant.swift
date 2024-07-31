@@ -10,34 +10,9 @@ import Foundation
 
 struct SP {
     struct ProductionServer {
-        //Production
-         /*static let baseURL = "https://tcqallarix.azurewebsites.net/"
-         static let baseURLVacation = "https://vcqallarix.azurewebsites.net/"
-         static let baseURLFlexPlace = "https://fxqallarix.azurewebsites.net/"
-         static let baseURLNotification = "https://npqallarix.azurewebsites.net/"
-         static let baseURLAmbassador = "https://ceqallarix.azurewebsites.net/"
-         static let baseURLChatBot = "https://qnaqallarix.azurewebsites.net/"
-         static let baseURLSamiv2 = "https://apimngr-genesis-prod.azure-api.net/hrmanagement/chatbot/"
-         static let baseURLAllToField = "https://tacqallarix.azurewebsites.net/"
-         static let baseURLPersonalEntry = "https://roqallarix.azurewebsites.net/"
-         static let baseURLBearer = "https://wa-qallarix-prod.azurewebsites.net/azauth/acccess"
-         
-         static let suscriptionKey = "95383afd111146cf9ba1225c574fd03f"
-        
-    
-         static let topicFCM = "productioniOS"
-         static let topicNewFCM = "QXNotification"*/
-        
-         
-         
-        
-        //QA
+     
         static let baseURL = Environment.rootURL
-        
-        
-        
-        
-        
+   
     }
     
     struct HTTP_CODE {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BaseResponse<T: Codable>: Codable {
+struct BaseDTO<T: Codable>: Codable {
     let codigo: String
     let mensaje: String
     let data: T?

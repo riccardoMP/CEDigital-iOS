@@ -8,15 +8,17 @@
 
 import UIKit
 import SwiftyRSA
+import Combine
 
 class SplashViewController: GenericViewController, ViewControllerProtocol {
-    
-    
     
     let buildCode = Bundle.main.versionCode
     let buildNumber = Bundle.main.versionNumber
     
     var coordinator: AppCoordinator?
+    
+    var viewModel : SplashViewModel?
+    var subscriber = Set<AnyCancellable>()
     
     @IBOutlet weak var vHeightCell: UIView!
     @IBOutlet weak var lblVersion: UILabel!
@@ -24,11 +26,9 @@ class SplashViewController: GenericViewController, ViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        self.initializeUI()
-        self.setup()
-        
+        initializeUI()
+        setup()
+        bindViewModel()
         
         /*
          //To get public key.
@@ -92,91 +92,53 @@ class SplashViewController: GenericViewController, ViewControllerProtocol {
     }
     
     func setup() {
-        
-        self.doValidationNetwork()
-        
-        if(AppPreferences.init().parametryCEObject.uuid.isEmpty){
-            ParametryCEFluentBuilder(builder: AppPreferences.init().parametryCEObject)
-                .setUUID(uuid: UUID().uuidString.replacingOccurrences(of: "-", with: ""))
-                
-                .build()
-        }
-        
-        
-        
+        viewModel?.generateUUID()
+        viewModel?.doValidationNetwork()
     }
     
-    func showAlertForward() {
-        let alert = UIAlertController(title: "general_oops".localized, message: "generic_description_no_internet".localized, preferredStyle: UIAlertController.Style.alert)
+    private func bindViewModel() {
+        viewModel?.$errorMessage
+            .compactMap({ $0 })
+            .sink{ [weak self] message in
+                guard !String.isNilOrEmpty(string: message) else {return}
+                
+                self?.showInternetAlert(message: message)
+            }
+            .store(in: &subscriber)
+        
+        self.viewModel?.$deviceValidated
+            .compactMap({ $0 })
+            .sink { [weak self] isDeviceValid in
+                self?.coordinateSplashTo(isDeviceValid: isDeviceValid)
+            }.store(in: &subscriber)
+        
+        
+        self.viewModel?.loadingState
+            .sink { [weak self] state in
+                self?.handleActivityIndicator(message: "general_loading".localized, state: state)
+            }
+            .store(in: &subscriber)
+    }
+    
+    func showInternetAlert(message: String) {
+        let alert = UIAlertController(title: "general_oops".localized, message: message, preferredStyle: .alert)
         
         
         alert.addAction(UIAlertAction(title: "general_ok".localized,
-                                      style: UIAlertAction.Style.default,
+                                      style: .default,
                                       handler: {(_: UIAlertAction!) in
-                                        self.doValidationNetwork()
-                                      }))
+            self.viewModel?.doValidationNetwork()
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func doValidationNetwork(){
-        NetworkManager.isUnreachable { _ in
-            DispatchQueue.main.async {
-                self.showAlertForward()
-            }
-        }
-        
-        NetworkManager.isReachable { _ in
-            if(AppPreferences.init().parametryCEObject.isUserEnrolled && AppPreferences.init().parametryCEObject.isAppleUser){
-                self.coordinator?.coordinateToLogin()
-            }else{
-                
-                self.doValidateDevice()
-            }
-            
+    
+    func coordinateSplashTo(isDeviceValid : Bool){
+        if(isDeviceValid) {
+            coordinator?.coordinateToLogin()
+        }else{
+            coordinator?.coordinateToEnroll()
         }
     }
     
-    // MARK: - WebService
-    
-    func doValidateDevice() {
-        
-        
-        LoadingIndicatorView.show("vc_loading_register".localized)
-        
-        
-        APIClient.validateDevice(post: ValidateDevicePost(sCodigoDispositivo: AppPreferences.init().parametryCEObject.uuid, uIdPersona: AppPreferences.init().parametryCEObject.uidPersona)) { result in
-            
-            
-            switch result {
-            case .success( let response):
-                
-                if(AppPreferences.init().parametryCEObject.isUserEnrolled && response.data){
-                    self.coordinator?.coordinateToLogin()
-                }else{
-                    
-                    self.coordinator?.coordinateToEnroll()
-                }
-                
-                
-                
-            case .failure(let error):
-                LoadingIndicatorView.hide()
-                
-                
-                switch error.httpCode {
-                case SP.HTTP_CODE.BAD_REQUEST, SP.HTTP_CODE.UNAUTHORIZED:
-                    
-                    self.coordinator?.coordinateToEnroll()
-                    
-                    
-                default:
-                    //self.showAlertForward()
-                    self.coordinator?.coordinateToEnroll()
-                    
-                }
-                
-            }
-            
-        }
-    }
 }

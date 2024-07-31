@@ -245,6 +245,28 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
     
 }
 
+extension GenericViewController {
+    func handleActivityIndicator(message: String, state : ViewModelStatus) {
+        switch state {
+        case .loadStart, .validating:
+            LoadingIndicatorView.show(message)
+        case .dismissAlert:
+            LoadingIndicatorView.hide()
+        }
+    }
+    
+    func handleActivityIndicator(state : ViewModelStatus) {
+        switch state {
+        case .loadStart:
+            LoadingIndicatorView.show("general_loading".localized)
+        case .validating:
+            LoadingIndicatorView.show("general_validating".localized)
+        case .dismissAlert:
+            LoadingIndicatorView.hide()
+        }
+    }
+}
+
 
 // MARK: GenericViewControllerProtocol
 

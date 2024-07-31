@@ -137,6 +137,7 @@ class APIClient : BaseAPIClient {
             .validate(statusCode: 200..<300)
             .responseDecodable(of: T.self) { response in
                 
+                
                 do {
                     
                     guard let jsonData = response.data else {
@@ -197,7 +198,7 @@ class APIClient : BaseAPIClient {
         
     }
     
-    static func deviceInformation( post: DeviceInformationPost, completion:@escaping (Result<BaseResponse<EnrollResponse>, NetworkMessage>)->Void) {
+    static func deviceInformation( post: DeviceInformationPost, completion:@escaping (Result<BaseDTO<EnrollResponse>, NetworkMessage>)->Void) {
         
         performRequest(route: APIRouter.deviceInformation(post: post), completion: completion)   
     }
@@ -209,7 +210,7 @@ class APIClient : BaseAPIClient {
     }
     
     // MARK: - Enroll
-    static func validationUser( post: UserValidationPost, completion:@escaping (Result<BaseResponse<UserCE>, NetworkMessage>)->Void) {
+    static func validationUser( post: UserValidationPost, completion:@escaping (Result<BaseDTO<UserCE>, NetworkMessage>)->Void) {
         
         performRequest(route: APIRouter.validationUser(post: post), completion: completion)
         
