@@ -89,7 +89,7 @@ class BiometricClient : BaseAPIClient {
     }
     
     // MARK: - Fingerprint
-    static func validationFingerPrintIdentity( post: FingerPrintValidatePost, completion:@escaping (Result<BaseResponse<FingerPrintValidateResponse>, NetworkMessage>)->Void) {
+    static func validationFingerPrintIdentity( post: FingerPrintValidatePost, completion:@escaping (Result<BaseDTO<FingerPrintValidateResponse>, NetworkMessage>)->Void) {
         
         performRequest(route: BiometricRouter.validationFingerPrintIdentity(post: post), completion: completion)
     }
@@ -102,7 +102,7 @@ class BiometricClient : BaseAPIClient {
         
     }
     
-    static func validationFacialIdentity( post: FacialValidationMigrationPost, completion:@escaping (Result<BaseResponse<FacialValidationMigrationResponse>, NetworkMessage>)->Void) {
+    static func validationFacialIdentity( post: FacialValidationMigrationPost, completion:@escaping (Result<BaseDTO<FacialValidationMigrationResponse>, NetworkMessage>)->Void) {
         
         performRequest(route: BiometricRouter.validationFacialIdentity(post: post), completion: completion)
         

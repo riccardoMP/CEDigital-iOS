@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Combine
 
 class AuthDocumentViewController: GenericViewController, ViewControllerProtocol {
     
-    private let viewModel = EnrollViewModel()
-    var coordinator: AuthenticationFlow?
+
+    var coordinator: AuthenticationCoordinator?
     
-    var typeDocument: String?
     var imageDocument: String?
     
+    var viewModel : AuthDocumentViewModel?
+    var subscriber = Set<AnyCancellable>()
     
     @IBOutlet weak var iviDocument: UIImageView!
     @IBOutlet weak var eteMaterialDocument: CEFloatingPlaceholderTextField!
@@ -33,16 +35,15 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         
         self.initializeUI()
         self.setup()
-        self.setupViewModel()
-        
+        self.bindViewModel()   
     }
     
     
     override func viewDidLayoutSubviews() {
         
-        
-        
+
     }
+    
     // MARK: - Method
     
     func initializeUI() {
@@ -73,7 +74,44 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         eteMaterialDocument.setup(typeEditText)
     }
     
-    func setupViewModel(){
+    private func bindViewModel() {
+        
+        self.viewModel?.$userRegisterPost
+            .compactMap({ $0 })
+            .sink { [weak self] post in
+                self?.coordinateToGeneratePassword(post: post)
+            }.store(in: &subscriber)
+        
+        viewModel?.$errorMessage
+            .compactMap({ $0 })
+            .sink{ [weak self] message in
+                guard !String.isNilOrEmpty(string: message) else {return}
+                
+                self?.showAlert(message: message)
+            }
+            .store(in: &subscriber)
+        
+        self.viewModel?.$errorTextField
+            .compactMap({ $0 })
+            .sink{ [weak self] message in
+                guard !String.isNilOrEmpty(string: message) else {return}
+                self?.eteMaterialDocument.setError(message)
+            }.store(in: &subscriber)
+        
+        
+        self.viewModel?.loadingState
+            .sink { [weak self] state in
+                self?.handleActivityIndicator(message: "general_loading".localized, state: state)
+            }
+            .store(in: &subscriber)
+    }
+    
+    
+    private func coordinateToGeneratePassword(post: UserRegisterPost){
+        eteMaterialDocument.setError("")
+        coordinator?.coordinateToGeneratePassword(registerPost: post)
+    }
+    /*func setupViewModel22(){
         
         viewModel.deviceInformation.bind { [weak self]  device in
             guard device != nil else { return }
@@ -98,7 +136,6 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
             
             
             ParametryCEFluentBuilder(builder: AppPreferences.shared.parametryCEObject)
-                .setTypeEditTextStored(typeEditTextStored: self.typeEditText)
                 .setDocumentNumber(documentNumber: userCE!.sNumeroCarnet)
                 .setNumeroTramite(numeroTramite: userCE!.sNumeroTramite)
                 .setUIDPersona(uidPersona: userCE!.uIdPersona)
@@ -173,7 +210,7 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
         return isValid
         
         
-    }
+    }*/
     
     
     // MARK: - Action
@@ -181,8 +218,9 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
     @IBAction func onValidateUser(_ sender: Any) {
         
         //(TimerApplication.shared as! TimerApplication).startSession()
+        viewModel?.processPageData(documentNumber: eteMaterialDocument.textInput.text ?? "")
         
-        if(isValid()){
+        /*if(isValid()){
             
             if(eteMaterialDocument.textInput.text! == Constants.APPLE_DOCUMENT_CE ){
                 
@@ -205,7 +243,7 @@ class AuthDocumentViewController: GenericViewController, ViewControllerProtocol 
             }
             
             
-        }
+        }*/
     }
     
 }

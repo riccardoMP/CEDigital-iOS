@@ -161,8 +161,7 @@ enum APIRouter: URLRequestConvertible {
             return nil
             
         case .validateDevice(let post):
-            return ["sCodigoDispositivo": post.sCodigoDispositivo
-            ]
+            return ["sCodigoDispositivo": post.sCodigoDispositivo]
         case .validationUser(let post):
             return ["numeroBusqueda": post.numeroBusqueda,
                     "sCodeDispositivo": post.sCodeDispositivo,

@@ -26,11 +26,10 @@ class AppCoordinator: Coordinator, AppFlow {
     func start() {
         let vc = SplashViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self
+        vc.viewModel = SplashViewModel()
         
         window.rootViewController = vc
         window.makeKeyAndVisible()
-        
-        
     }
     
     // MARK: - Flow Methods

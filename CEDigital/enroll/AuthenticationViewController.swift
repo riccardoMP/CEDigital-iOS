@@ -10,7 +10,7 @@ import UIKit
 
 class AuthenticationViewController: GenericViewController, ViewControllerProtocol {
     
-    var coordinator: AuthenticationFlow?
+    var coordinator: AuthenticationCoordinator?
     var showDialogLogout:Bool?
     
     
@@ -20,9 +20,8 @@ class AuthenticationViewController: GenericViewController, ViewControllerProtoco
         
         let vc = AuthDocumentViewController.instantiate(storyboard: StoryboardConstants.SB_MAIN)
         vc.coordinator = self.coordinator
-        vc.typeDocument = Constants.DOCUMENT_TYPE_CE
         vc.imageDocument = "img_ce"
-        
+        vc.viewModel = AuthDocumentViewModel()
         
         self.add(asChildViewController: vc)
         
@@ -81,9 +80,5 @@ class AuthenticationViewController: GenericViewController, ViewControllerProtoco
         // Notify Child View Controller
         viewController.didMove(toParent: self)
     }
-    
-    
-    
-    
 }
 

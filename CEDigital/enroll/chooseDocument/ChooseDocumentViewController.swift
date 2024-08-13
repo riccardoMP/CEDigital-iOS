@@ -30,7 +30,6 @@ class ChooseDocumentViewController: GenericViewController, ViewControllerProtoco
         self.initializeUI()
         self.setup()
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

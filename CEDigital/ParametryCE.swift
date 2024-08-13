@@ -20,7 +20,6 @@ struct ParametryCE: Codable {
     var numeroTramite: String = ""
     var isUserEnrolled: Bool = false
     var isAppleUser: Bool = false
-    var typeEditTextStored: TypeEditText = TypeEditText(typeDocument: .DOCUMENT)
     var uuid: String = ""
     var uidPersona: String = ""
     
@@ -69,12 +68,6 @@ class ParametryCEFluentBuilder {
         return self
     }
     
-    func setTypeEditTextStored(typeEditTextStored: TypeEditText) -> Self {
-        self.builder.typeEditTextStored = typeEditTextStored
-        
-        return self
-    }
-    
     func setUUID(uuid: String) -> Self {
         self.builder.uuid = uuid
         
@@ -95,7 +88,6 @@ class ParametryCEFluentBuilder {
         self.builder.isUserEnrolled = false
         self.builder.isAppleUser = false
         self.builder.numeroTramite = ""
-        self.builder.typeEditTextStored = TypeEditText(typeDocument: .DOCUMENT)
         
         return self
     }

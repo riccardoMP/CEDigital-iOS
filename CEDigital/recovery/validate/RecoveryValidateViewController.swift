@@ -264,8 +264,6 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
         }else{
             self.showMsgAlert(title: "general_oops".localized, message: isValid().messageError, dismissAnimated: true)
         }
-        
-        
     }
     
     @IBAction func onSendAgain(_ sender: Any) {
@@ -288,7 +286,6 @@ class RecoveryValidateViewController: GenericViewController, ViewControllerProto
         LoadingIndicatorView.show("recovery_updating_password".localized)
         
         APIClient.validationCode(post: post) { result in
-            
             
             switch result {
             case .success( _):
