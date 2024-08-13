@@ -19,11 +19,24 @@ class SplashInteractorImpl : BaseAPI<Networking>, SplashInteractorProtocol {
         return checkInternetAvailability()
     }
     
-    func validateDevice() -> AnyPublisher<BaseDTO<Bool>?, APIError> {
-        let post = ValidateDevicePost(sCodigoDispositivo: appPreferences.parametryCEObject.uuid, uIdPersona: appPreferences.parametryCEObject.uidPersona)
-        return self.fetchData(target: .validateDevice(post: post), responseClass: BaseDTO<Bool>.self)
-    }
     
+    func validateDevice() async throws -> AnyPublisher<Bool, APIError> {
+        do{
+            let post = ValidateDevicePost(sCodigoDispositivo: appPreferences.parametryCEObject.uuid, uIdPersona: appPreferences.parametryCEObject.uidPersona)
+            let response = try await fetchDataAsync(target: .validateDevice(post: post), responseClass: BaseDTO<Bool>.self)
+            
+            guard let isValid : Bool = response.data else { return Fail<Bool, APIError>(error: APIError.general).eraseToAnyPublisher() }
+            
+            let isDeviceValid : Bool = appPreferences.parametryCEObject.isUserEnrolled && isValid
+            
+            return Just(isDeviceValid)
+                .setFailureType(to: APIError.self)
+                .eraseToAnyPublisher()
+        }catch{
+            return Fail<Bool, APIError>(error: APIError.general).eraseToAnyPublisher()
+        }
+        
+    }
     
     func processDeviceValidationResponse(isValid: Bool?) -> AnyPublisher<Bool, APIError> {
         guard let isValid = isValid else { return Fail<Bool, APIError>(error: APIError.general).eraseToAnyPublisher() }

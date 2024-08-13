@@ -22,7 +22,7 @@ final class SplashViewModel : ObservableObject, splashViewModel {
     var loadingState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
     var subscriber = Set<AnyCancellable>()
     
-
+    
     @Published var deviceValidated: Bool?
     @Published var errorMessage: String = ""
     
@@ -54,27 +54,27 @@ extension SplashViewModel {
             .store(in: &subscriber)
     }
     
-    
     private func validateDevice() {
-        self.loadingState.send(.loadStart)
-        self.interactor.validateDevice()
-            .receive(on: DispatchQueue.main)
-            .flatMap{ [self]response -> AnyPublisher<Bool, APIError> in
-                return interactor.processDeviceValidationResponse(isValid: response?.data)
-            }
-            .sink { data in
-                switch data {
-                case .failure(_):
-                    self.loadingState.send(.dismissAlert)
-                    self.deviceValidated = false
-                case .finished:
-                    break
+        _Concurrency.Task {
+            self.loadingState.send(.loadStart)
+            
+            let publisher = try await self.interactor.validateDevice()
+            
+            publisher.receive(on: DispatchQueue.main)
+                .sink { data in
+                    switch data {
+                    case .failure(_):
+                        self.loadingState.send(.dismissAlert)
+                        self.deviceValidated = false
+                    case .finished:
+                        break
+                    }
+                    
+                } receiveValue: { [weak self] data in
+                    self?.deviceValidated = data
                 }
-                
-            } receiveValue: { [weak self] data in
-                self?.deviceValidated = data
-            }
-            .store(in: &subscriber)
+                .store(in: &subscriber)
+        }
     }
 }
 

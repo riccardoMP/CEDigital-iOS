@@ -110,7 +110,7 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
     }
     
     
-
+    
     
     // MARK: - Session
     
@@ -120,7 +120,7 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
             guard device != nil else { return }
             
             (TimerApplication.shared as! TimerApplication).startSession()
-
+            
         }
         
         
@@ -188,7 +188,7 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
     func showMsgAlert(title:String, message:String, dismissAnimated:Bool){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "general_ok".localized, style: UIAlertAction.Style.default)
-        {
+                        {
             (action: UIAlertAction!) -> Void in
             alert.dismiss(animated: dismissAnimated, completion: nil)
         })
@@ -206,7 +206,7 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
             alert.dismiss(animated: true)
         }
     }
-
+    
     
     // MARK: - WebService
     
@@ -247,11 +247,13 @@ class GenericViewController: UIViewController, Storyboarded, SessionProtocol {
 
 extension GenericViewController {
     func handleActivityIndicator(message: String, state : ViewModelStatus) {
-        switch state {
-        case .loadStart, .validating:
-            LoadingIndicatorView.show(message)
-        case .dismissAlert:
-            LoadingIndicatorView.hide()
+        DispatchQueue.main.async {
+            switch state {
+            case .loadStart, .validating:
+                LoadingIndicatorView.show(message)
+            case .dismissAlert:
+                LoadingIndicatorView.hide()
+            }
         }
     }
     

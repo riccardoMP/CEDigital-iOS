@@ -102,7 +102,21 @@ class BaseAPI<T: TargetType> {
                         
                     case .success(let value):
                     
-                        continuation.resume( returning: value)
+    
+                        
+                        if(self.isGoodRequest(data: response.data)){
+                            if let bearerToken = response.response?.allHeaderFields[HTTPHeaderField.authentication.rawValue] as? String{
+                                AppPreferences.shared.bearerToken = bearerToken
+                            }
+                            
+                            continuation.resume( returning: value)
+                        }else{
+                            let errorParsed : APIError = self.parseApiError(data: response.data)
+                            return continuation.resume(throwing: errorParsed)
+                        }
+                        
+                        
+                        
                         
                     case .failure(let error):
                             

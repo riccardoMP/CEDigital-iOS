@@ -12,7 +12,7 @@ import Combine
 protocol SplashInteractorProtocol : AnyObject {
     func isNetworkAvailable() -> AnyPublisher <Bool, APIError>
     
-    func validateDevice() -> AnyPublisher <BaseDTO<Bool>?, APIError>
+    func validateDevice() async throws -> AnyPublisher<Bool, APIError>
     func generateUUID()
     func processDeviceValidationResponse(isValid : Bool?) -> AnyPublisher <Bool, APIError>
     
