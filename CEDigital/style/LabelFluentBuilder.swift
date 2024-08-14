@@ -52,7 +52,14 @@ class LabelFluentBuilder {
         return self
     }
     
-    
+    func setBoldLikeWhatsapp() -> Self {
+        let boldFont = UIFont(name: UIParameters.TTF_BOLD, size: self.label.font.pointSize)
+        
+        self.label.attributedText  = NSMutableAttributedString().boldAsteriskLikeWhatsapp(resultString: self.label.text!, originFont: self.label.font, boldFont: boldFont!)
+        
+        
+        return self
+    }
     
     
     

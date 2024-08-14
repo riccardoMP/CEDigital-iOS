@@ -52,6 +52,7 @@ class TermsConditionViewController: GenericViewController, ViewControllerProtoco
             .setTextColor(#colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1))
             .setText("general_terms_Condition".localized)
             .setTextSize(14, UIParameters.TTF_LIGHT)
+            .setBoldLikeWhatsapp()
             .build()
         
         butDone = ButtonFluentBuilder.init(button: butDone)

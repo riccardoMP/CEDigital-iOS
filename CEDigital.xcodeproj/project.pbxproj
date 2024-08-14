@@ -21,6 +21,7 @@
 		B89BDF292C40917600153CF6 /* roboto-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF262C4090CE00153CF6 /* roboto-light.ttf */; };
 		B89BDF2A2C40917C00153CF6 /* roboto-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF272C4090CE00153CF6 /* roboto-regular.ttf */; };
 		B89BDF2B2C40917F00153CF6 /* roboto-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89BDF282C4090CE00153CF6 /* roboto-bold.ttf */; };
+		B8A6511F2C6D1D1400078D9F /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6511E2C6D1D1400078D9F /* NSMutableAttributedStringExtension.swift */; };
 		C709258A2732DDD800387093 /* PopUpResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70925892732DDD800387093 /* PopUpResponseProtocol.swift */; };
 		C70DC3882914594D00980DD7 /* EnrollResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DC3872914594D00980DD7 /* EnrollResponse.swift */; };
 		C722407C2502E2D100AC0A8E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722407B2502E2D100AC0A8E /* Environment.swift */; };
@@ -206,6 +207,7 @@
 		B89BDF262C4090CE00153CF6 /* roboto-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-light.ttf"; sourceTree = "<group>"; };
 		B89BDF272C4090CE00153CF6 /* roboto-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-regular.ttf"; sourceTree = "<group>"; };
 		B89BDF282C4090CE00153CF6 /* roboto-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-bold.ttf"; sourceTree = "<group>"; };
+		B8A6511E2C6D1D1400078D9F /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		C7039B21270CC25C00103C32 /* Veridium4FBiometrics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Veridium4FBiometrics.xcframework; path = Veridium4F/Veridium4FBiometrics.xcframework; sourceTree = "<group>"; };
 		C7039B22270CC25C00103C32 /* VeridiumAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VeridiumAnalytics.xcframework; path = Veridium4F/VeridiumAnalytics.xcframework; sourceTree = "<group>"; };
 		C7039B24270CC25C00103C32 /* VeridiumCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VeridiumCore.xcframework; path = Veridium4F/VeridiumCore.xcframework; sourceTree = "<group>"; };
@@ -416,6 +418,14 @@
 				449DFBC95928A35564961013 /* Pods_CEDigital.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8A6511D2C6D1D0B00078D9F /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				B8A6511E2C6D1D1400078D9F /* NSMutableAttributedStringExtension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		C70925882732DD9300387093 /* general */ = {
@@ -957,6 +967,7 @@
 		C7EA33F524E05FDB002EE73D /* util */ = {
 			isa = PBXGroup;
 			children = (
+				B8A6511D2C6D1D0B00078D9F /* extension */,
 				C7952BD12742CF6D0099348E /* picker */,
 				C7C1FF492720C58D0012A96C /* enum */,
 				C7D477BA270E00960026D08C /* veridium */,
@@ -1394,6 +1405,7 @@
 				C783096B2795DBDA000323F0 /* DisclaimerView.swift in Sources */,
 				C77CDA4224E89AF6009B8AE5 /* AuthenticationCoordinator.swift in Sources */,
 				C7F10BEB2525301500933DA1 /* SeeMoreViewController.swift in Sources */,
+				B8A6511F2C6D1D1400078D9F /* NSMutableAttributedStringExtension.swift in Sources */,
 				C7CAB69C24EDF95100687C3B /* TermsConditionViewController.swift in Sources */,
 				C7EA340F24E06676002EE73D /* StoryboardConstants.swift in Sources */,
 				C76DA83B27ACCB78004CAC0D /* EnumTypeEditText.swift in Sources */,
@@ -1522,7 +1534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1537,7 +1549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.4.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1688,7 +1700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1703,7 +1715,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.4.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1729,7 +1741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = PX99DSKBWJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1743,7 +1755,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.4.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
